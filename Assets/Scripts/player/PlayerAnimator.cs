@@ -1,8 +1,9 @@
+using Unity.Netcode;
 using UnityEngine;
 
 namespace Game {
 
-    public class PlayerAnimator : MonoBehaviour
+    public class PlayerAnimator : NetworkBehaviour
     {
         [Header("References")] [SerializeField]
         private Animator _anim;

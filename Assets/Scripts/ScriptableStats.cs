@@ -3,8 +3,9 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ScriptableStats : ScriptableObject
 {
-    [Header("LAYERS")] [Tooltip("Set this to the layer your player is on")]
-    public LayerMask PlayerLayer;
+    [Header("LAYERS")] [Tooltip("Set this to the floor layer")]
+    public LayerMask FloorLayer;
+    public LayerMask WallLayer;
 
     [Header("INPUT")] [Tooltip("Makes all Input snap to an integer. Prevents gamepads from walking slowly. Recommended value is true to ensure gamepad/keybaord parity.")]
     public bool SnapInput = true;
@@ -53,4 +54,22 @@ public class ScriptableStats : ScriptableObject
 
     [Tooltip("The amount of time we buffer a jump. This allows jump input before actually hitting the ground")]
     public float JumpBuffer = .2f;
+
+    [Header("Dash")]
+	public float dashSpeed;
+	public float dashDuration;
+	[Space(5)]
+	public float postDashDuration; //Time after you finish the inital drag phase, smoothing the transition back to idle (or any standard state)
+	public float postDashHorizontalAccel; //Slows down player, makes dash feel more responsive (used in Celeste)
+	public float postDashHorizontalDesaccel; //Slows the affect of player movement while dashing
+	[Space(5)]
+	public float dashCooldown;
+
+    [Header("WallJump")]
+    public float wallJumpHorizontalForce;
+	public float wallJumpVerticalForce;
+	public float wallJumpDuration;
+	public float slidingSpeed;
+	public float slidingDesaccel;
+	public float slidingToWallJumpBuffer;
 }

@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28994207c6b0cd54b8cfb5c3edad7902, type: 3}
   m_Name: FirstStats
   m_EditorClassIdentifier: 
-  PlayerLayer:
+  FloorLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
+  WallLayer:
+    serializedVersion: 2
+    m_Bits: 256
   SnapInput: 1
   VerticalDeadZoneThreshold: 0.3
   HorizontalDeadZoneThreshold: 0.1
@@ -31,3 +34,15 @@ MonoBehaviour:
   JumpEndEarlyGravityModifier: 4
   CoyoteTime: 0.1
   JumpBuffer: 0.2
+  dashSpeed: 30
+  dashDuration: 0.15
+  postDashDuration: 0
+  postDashHorizontalAccel: 0
+  postDashHorizontalDesaccel: 0
+  dashCooldown: 3
+  wallJumpHorizontalForce: 5
+  wallJumpVerticalForce: 12
+  wallJumpDuration: 0.2
+  slidingSpeed: 0.2
+  slidingDesaccel: 1000
+  slidingToWallJumpBuffer: 0.2

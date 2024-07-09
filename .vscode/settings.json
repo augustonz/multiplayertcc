@@ -51,8 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Multiplayer TCC.sln",
-    "dotnetAcquisitionExtension.existingDotnetPath": [
-        {"extensionId": "msazurermtools.azurerm-vscode-tools", "path": "C:\\Program Files\\dotnet\\dotnet.exe"}
-    ]
+    "dotnet.defaultSolution": "Multiplayer TCC.sln"
 }
