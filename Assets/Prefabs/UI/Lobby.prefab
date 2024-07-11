@@ -813,10 +813,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8866414696955849265, guid: 966fac004992d2849babde23dbe63759, type: 3}
-      propertyPath: actionName
-      value: startServer
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1450,10 +1446,6 @@ PrefabInstance:
     - target: {fileID: 7430024681149087087, guid: 966fac004992d2849babde23dbe63759, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8866414696955849265, guid: 966fac004992d2849babde23dbe63759, type: 3}
-      propertyPath: actionName
-      value: joinMatch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2606,7 +2598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8866414696955849265, guid: 966fac004992d2849babde23dbe63759, type: 3}
       propertyPath: actionName
-      value: exitGame
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

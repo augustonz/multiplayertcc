@@ -14,7 +14,7 @@ public class PlayerCase : NetworkBehaviour
     [SerializeField] Button confirmPlayerNameBtn;
     [SerializeField] ToggleGroup chooseColorGroup;
 
-    PlayerCaseData playerCaseData = new PlayerCaseData();
+    PlayerCaseData playerCaseData = new PlayerCaseData(true);
 
     public void SetPlayerData(PlayerCaseData data) {
         playerCaseData = data;

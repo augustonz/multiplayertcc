@@ -29,7 +29,7 @@ public class LobbyUI : NetworkBehaviour
     public void UpdateUI(LobbyData data) {
         PlayersReadyMsg.text = $"X of X players ready";
         PopupMsg.text = $"Sample pop-up txt";
-        readyPlayerButtonText.text = data.IsLocalPlayerReady? $"Unready" : "Ready";
+        readyPlayerButtonText.text = data.IsLocalPlayerReady()? $"Unready" : "Ready";
         UpdatePlayerCasesUI(data.playerCaseDatas);
     }
     void UpdatePlayerCasesUI(List<PlayerCaseData> playerCasesDatas) {
