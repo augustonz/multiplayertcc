@@ -2,11 +2,17 @@
 
 ## Implementation To-Do
 
-* Transform Lobby into a Network Variable following the docs.
-* While doing the item above, pay close attention on how to deal with strings on their own specific part
-* Afterwards, test the Lobby working with a single player and finish it
-* Create Transition from lobby to stage working
-* Create stage UI and logic working
+* Create match UI logic
+
+* Verify why player color in match aint working
+
+* Expand background vertically so it doesnt bug out and add vertical parralax
+* Add audio
+* Add Animations
+* Add menu background
+
+* Make Camera Better
+ 
 * Create first stage
 * Test with players
 

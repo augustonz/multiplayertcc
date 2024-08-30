@@ -32,8 +32,9 @@ namespace Game {
         private float _time;
 
         public override void OnNetworkSpawn() {
-            if (!IsOwner) Destroy(this);
+            if (!IsOwner && !IsServer) Destroy(this);
             base.OnNetworkSpawn();
+            GameController.Singleton.match.SpawnedLocalPlayer(this);
         } 
 
         private void Awake()
@@ -45,7 +46,8 @@ namespace Game {
             _leftWallCollider = gameObject.transform.Find("LeftWallCollider").GetComponent<BoxCollider2D>();
             
             Floorfilter.SetLayerMask(_stats.FloorLayer);
-            Wallfilter.SetLayerMask(_stats.WallLayer);
+            Wallfilter.SetLayerMask(_stats.FloorLayer);
+            // Wallfilter.SetLayerMask(_stats.WallLayer);
 
             _cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
             iaa["Jump"].Enable();
@@ -54,8 +56,22 @@ namespace Game {
 
         private void Update()
         {
-            _time += Time.deltaTime;
+            UpdateTimers();
+
             GatherInput();
+        }
+
+        void UpdateTimers() {
+            dashTimer +=Time.deltaTime;
+            _time += Time.deltaTime;
+        }
+
+        public void EnablePlayerInput(bool isEnabled) {
+            if (isEnabled) {
+                iaa.Enable();
+            } else {
+                iaa.Disable();
+            }
         }
 
         private void GatherInput()
@@ -98,6 +114,14 @@ namespace Game {
             HandleGravity();
             
             ApplyMovement();
+        }
+
+        public void Die() {
+            _frameVelocity = Vector2.zero;
+            _rb.velocity = Vector2.zero;
+            _rb.angularVelocity = 0;
+
+            GameController.Singleton.match.PlayerDied(this);
         }
 
         #region Collisions
@@ -245,13 +269,20 @@ namespace Game {
 		#endregion
 
         #region Dashing
-        private bool HasDashAvailable = true;
+        private bool HasDashAvailable => dashTimer >= _stats.dashCooldown;
+        public float DashFillPercentage => Mathf.Min(1,dashTimer/_stats.dashCooldown);
         private bool IsDashing;
         private bool DashWasPressedOnUpdate;
+        private float dashTimer;
         private bool ShouldDash => !IsDashing && HasDashAvailable && DashWasPressedOnUpdate;
         private void HandleDash() {
             if (ShouldDash) ExecuteDash();
             DashWasPressedOnUpdate = false;
+        }
+        [Rpc(SendTo.Owner)]
+        public void AddDashPercRpc(float perc)
+        {
+            dashTimer += perc * _stats.dashCooldown;
         }
 
         private void ExecuteDash() {
@@ -271,19 +302,11 @@ namespace Game {
         private IEnumerator StartDash(Vector2 dir) {
             
             _frameVelocity = dir * _stats.dashSpeed;
+            dashTimer = 0;
 
             yield return new WaitForSeconds(_stats.dashDuration);
 
             IsDashing = false;
-            HasDashAvailable = false;
-
-            StartCoroutine(nameof(RefillDash));
-        }
-
-        private IEnumerator RefillDash() {
-            //For testing purposes
-            yield return new WaitForSeconds(_stats.dashCooldown);
-            HasDashAvailable=true;
         }
 
         #endregion
@@ -336,7 +359,8 @@ namespace Game {
             if (_grounded && _frameVelocity.y <= 0f)
             {
                 _frameVelocity.y = _stats.GroundingForce;
-            } else if (IsSliding && !_grounded) {
+            } else if (IsSliding && !_grounded) 
+            {
                 _frameVelocity.y = Mathf.MoveTowards(_frameVelocity.y, -_stats.slidingSpeed, _stats.slidingDesaccel* Time.fixedDeltaTime);
             }
             else

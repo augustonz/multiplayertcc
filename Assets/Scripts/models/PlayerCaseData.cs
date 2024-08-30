@@ -1,17 +1,27 @@
+using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
 
 public struct PlayerCaseData : INetworkSerializable, System.IEquatable<PlayerCaseData> {
     public ulong clientId;
-    public string playerName;
+    public FixedString128Bytes playerName;
     public bool isReady;
-    public Color playerColor;
-    
-    public PlayerCaseData(bool dummyParam) {
-        clientId = 0;
-        playerName = "";
-        isReady = false;
-        playerColor = Color.black;
+    public FixedString128Bytes playerColor;
+
+    public static PlayerCaseData Empty() {
+        PlayerCaseData playerCase;
+        playerCase.clientId = 0;
+        playerCase.playerName = "";
+        playerCase.isReady = false;
+        playerCase.playerColor = "blue";
+        return playerCase;
+    }
+
+    public PlayerCaseData(ulong clientId, string playerName, bool isReady, string playerColor) {
+        this.clientId=clientId;
+        this.playerName=playerName;
+        this.isReady=isReady;
+        this.playerColor=playerColor;
     }
 
     public bool IsEmpty() {
@@ -40,12 +50,12 @@ public struct PlayerCaseData : INetworkSerializable, System.IEquatable<PlayerCas
 
     public bool Equals(PlayerCaseData other)
     {
-        return clientId == other.clientId;
+        return clientId == other.clientId && playerName == other.playerName && playerColor == other.playerColor && isReady == other.isReady;
     }
 
     public override string ToString()
     {
-        string ans = $"clientId: {clientId}, playerName: {playerName},isReady: {isReady},plaeyrColor: {playerColor}\n";
+        string ans = $"clientId: {clientId}, playerName: {playerName},isReady: {isReady},playerColor: {playerColor}\n";
         return ans;
     }
 }

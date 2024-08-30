@@ -1,52 +1,76 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 using Unity.Netcode;
+using UnityEngine;
 
 public struct LobbyData : INetworkSerializable, System.IEquatable<LobbyData>
 {
-    public ulong localClientId;
-    public List<ulong> clientIdsInLobby;
-    public List<PlayerCaseData> playerCaseDatas;
-    public int PlayersInLobby => clientIdsInLobby.Count;
-    public int ReadyPlayers => playerCaseDatas.FindAll(data => data.isReady).Count;
+    public ulong[] clientIdsInLobby;
+    public PlayerCaseData[] playerCaseDatas;
+    public int PlayersInLobby => clientIdsInLobby.Where(id=>id!=0).Count();
+    public int ReadyPlayers => playerCaseDatas.Where(data => data.isReady).Count();
     public bool IsLocalPlayerReady()
     {
-        ulong clientid = localClientId;
-        return playerCaseDatas.Exists(data => data.clientId == clientid && data.isReady);
+        return playerCaseDatas.Any(data => data.clientId == GameController.Singleton.MyNetworkManager.LocalClientId && data.isReady);
     }
 
-    public LobbyData(bool dummyParam)
-    {
-        localClientId = 0;
-        clientIdsInLobby = new List<ulong>();
-        playerCaseDatas = new List<PlayerCaseData>
-        {
-            new PlayerCaseData(true),
-            new PlayerCaseData(true),
-            new PlayerCaseData(true),
-            new PlayerCaseData(true),
-            new PlayerCaseData(true),
-            new PlayerCaseData(true)
+    public static LobbyData Empty() {
+        LobbyData lobby;
+        lobby.clientIdsInLobby = new ulong[6];
+        lobby.playerCaseDatas = new PlayerCaseData[] {
+            PlayerCaseData.Empty(),
+            PlayerCaseData.Empty(),
+            PlayerCaseData.Empty(),
+            PlayerCaseData.Empty(),
+            PlayerCaseData.Empty(),
+            PlayerCaseData.Empty()
         };
+        return lobby;
     }
 
-    public void addClientToPlayerCaseDatas(ulong clientId)
+    public void addClientToPlayerCaseDatas(out LobbyData lobbyData,ulong clientId)
     {
-        PlayerCaseData emptyCase = playerCaseDatas.Find(data =>
-        {
-            return data.clientId == 0;
-        });
-        emptyCase.clientId = clientId;
+        int index = Array.FindIndex(playerCaseDatas,caseData=>caseData.clientId==0);
+        PlayerCaseData interm = playerCaseDatas[index];
+        interm.clientId = clientId;
+        playerCaseDatas[index] = interm;
+        lobbyData = this;
     }
 
-    public void removeClientFromPlayerCaseDatas(ulong clientId)
+    public void changeReadyStatus(out LobbyData lobbyData,ulong clientId)
     {
-        PlayerCaseData oldCase = playerCaseDatas.Find(data =>
-        {
-            return data.clientId == clientId;
-        });
-        oldCase = new PlayerCaseData(true);
+        int index = Array.FindIndex(playerCaseDatas,caseData=>caseData.clientId==clientId);
+        PlayerCaseData interm = playerCaseDatas[index];
+        interm.isReady = !interm.isReady;
+        playerCaseDatas[index] = interm;
+        lobbyData = this;
+    }
+
+    public void changePlayerCaseName(out LobbyData lobbyData,ulong clientId,string name)
+    {
+        int index = Array.FindIndex(playerCaseDatas,caseData=>caseData.clientId==clientId);
+        PlayerCaseData interm = playerCaseDatas[index];
+        interm.playerName = name;
+        playerCaseDatas[index] = interm;
+        lobbyData = this;
+    }
+
+        public void changePlayerColor(out LobbyData lobbyData,ulong clientId,string color)
+    {
+        int index = Array.FindIndex(playerCaseDatas,caseData=>caseData.clientId==clientId);
+        PlayerCaseData interm = playerCaseDatas[index];
+        interm.playerColor = color;
+        playerCaseDatas[index] = interm;
+        lobbyData = this;
+    }
+
+    public void removeClientFromPlayerCaseDatas(out LobbyData lobbyData,ulong clientId)
+    {
+        int index = Array.FindIndex(playerCaseDatas,caseData=>caseData.clientId==clientId);
+        playerCaseDatas[index] = PlayerCaseData.Empty();
+        lobbyData = this;
     }
 
     public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
@@ -54,41 +78,41 @@ public struct LobbyData : INetworkSerializable, System.IEquatable<LobbyData>
         if (serializer.IsReader)
         {
             var reader = serializer.GetFastBufferReader();
-            reader.ReadValueSafe(out localClientId);
 
             int clientIdsCount;
             reader.ReadValueSafe(out clientIdsCount);
-            clientIdsInLobby = new List<ulong>();
+            List<ulong> clientsList = new List<ulong>();
             for (int i = 0; i < clientIdsCount; i++)
             {
                 ulong newClientId;
                 reader.ReadValueSafe(out newClientId);
-                clientIdsInLobby.Add(newClientId);
+                clientsList.Add(newClientId);
             }
+            clientIdsInLobby = clientsList.ToArray();
 
             int playerCasesCount;
             reader.ReadValueSafe(out playerCasesCount);
-            playerCaseDatas = new List<PlayerCaseData>();
+            List<PlayerCaseData> playerCasesList = new List<PlayerCaseData>();
             for (int i = 0; i < playerCasesCount; i++)
             {
                 PlayerCaseData newplayerCaseData;
                 reader.ReadValueSafe(out newplayerCaseData);
-                playerCaseDatas.Add(newplayerCaseData);
+                playerCasesList.Add(newplayerCaseData);
+            playerCaseDatas = playerCasesList.ToArray();
             }
         }
         else
         {
             var writer = serializer.GetFastBufferWriter();
-            writer.WriteValueSafe(localClientId);
 
-            writer.WriteValueSafe(clientIdsInLobby.Count);
+            writer.WriteValueSafe(clientIdsInLobby.Length);
             foreach (ulong clientId in clientIdsInLobby)
             {
                 writer.WriteValueSafe(clientId);
             }
 
-            writer.WriteValueSafe(playerCaseDatas.Count);
-            for (int i = 0; i < playerCaseDatas.Count; i++)
+            writer.WriteValueSafe(playerCaseDatas.Length);
+            for (int i = 0; i < playerCaseDatas.Length; i++)
             {
                 PlayerCaseData caseData = playerCaseDatas[i];
                 serializer.SerializeValue(ref caseData);
@@ -98,15 +122,23 @@ public struct LobbyData : INetworkSerializable, System.IEquatable<LobbyData>
 
     public bool Equals(LobbyData other)
     {
-        return localClientId == other.localClientId && clientIdsInLobby == other.clientIdsInLobby;
+        if (other.clientIdsInLobby==null || other.playerCaseDatas==null || clientIdsInLobby == null || playerCaseDatas == null) return false;
+        
+        return Util.IsEqualArrays(clientIdsInLobby,other.clientIdsInLobby) && Util.IsEqualArrays(playerCaseDatas,other.playerCaseDatas);
     }
 
     public override string ToString()
     {
-        string ans = $"localId: {localClientId}, idsList: ";
-        clientIdsInLobby.ForEach(id=>ans+=$"{id}, ");
-        ans+=", caseData: ";
-        playerCaseDatas.ForEach(data=>ans+=$"{data}");
+        string ans = $"idsList: ";
+        foreach (var item in clientIdsInLobby)
+        {
+            ans+=$"{item}, ";
+        } 
+        ans+=", caseDatas: ";
+        foreach (var item in playerCaseDatas)
+        {
+            ans+=$"{item}, ";
+        } 
         return ans;
     }
 }

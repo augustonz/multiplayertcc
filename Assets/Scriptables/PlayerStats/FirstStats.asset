@@ -21,26 +21,26 @@ MonoBehaviour:
   SnapInput: 1
   VerticalDeadZoneThreshold: 0.3
   HorizontalDeadZoneThreshold: 0.1
-  MaxSpeed: 14
-  Acceleration: 62.5
+  MaxSpeed: 7
+  Acceleration: 30
   GroundDeceleration: 59
   AirDeceleration: 100
   GroundingForce: -0.35
   GrounderDistance: 0.05
-  JumpPower: 18
+  JumpPower: 14
   AirJumps: 1
-  MaxFallSpeed: 40
-  FallAcceleration: 38.4
+  MaxFallSpeed: 30
+  FallAcceleration: 30
   JumpEndEarlyGravityModifier: 4
   CoyoteTime: 0.1
   JumpBuffer: 0.2
-  dashSpeed: 30
+  dashSpeed: 20
   dashDuration: 0.15
   postDashDuration: 0
   postDashHorizontalAccel: 0
   postDashHorizontalDesaccel: 0
   dashCooldown: 3
-  wallJumpHorizontalForce: 5
+  wallJumpHorizontalForce: 9
   wallJumpVerticalForce: 12
   wallJumpDuration: 0.2
   slidingSpeed: 0.2
