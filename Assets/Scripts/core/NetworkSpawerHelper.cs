@@ -13,13 +13,17 @@ public class NetworkSpawnHelper : NetworkBehaviour
         base.OnNetworkSpawn();
     }
     [Rpc(SendTo.Server)]
-    public void SpawnPlayerRpc(RpcParams rpcParams = default) {
+    public void SpawnPlayerRpc(Vector3 position, RpcParams rpcParams = default) {
         if (!enabled) return;
         NetworkObject playerPrefab = PrefabsList.Singleton.GetNetworkPrefab("player");
-        
-        NetworkObject instantiated = Instantiate(playerPrefab);
-        instantiated.SpawnAsPlayerObject(rpcParams.Receive.SenderClientId);
 
-        // NetworkManager.SpawnManager.InstantiateAndSpawn(playerPrefab,rpcParams.Receive.SenderClientId,false,true);
+        NetworkObject instantiated = Instantiate(playerPrefab, position, Quaternion.identity);
+
+        if (instantiated.gameObject.TryGetComponent<SpriteRenderer>(out var spriteRenderer))
+        {
+            string color = GameController.Singleton.match.matchData.Value.GetPlayerMatchData(rpcParams.Receive.SenderClientId).playerColor.Value;
+            spriteRenderer.material = Util.getPlayerMaterialFromColor(color);
+        }
+        instantiated.SpawnAsPlayerObject(rpcParams.Receive.SenderClientId);
     }
 }

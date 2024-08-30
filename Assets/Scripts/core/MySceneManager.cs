@@ -10,8 +10,6 @@ public class MySceneManager : NetworkBehaviour
 {
 
     public Scene CurrentScene { get => SceneManager.GetActiveScene(); }
-    // Dictionary<string,UnityAction<Scene,LoadSceneMode>> enterEvents = new Dictionary<string,UnityAction<Scene,LoadSceneMode>>();
-    // Dictionary<string,UnityAction<Scene>> exitEvents = new Dictionary<string, UnityAction<Scene>>();
 
     Dictionary<string,OnEventCompletedDelegateHandler> enterEvents = new Dictionary<string,OnEventCompletedDelegateHandler>();
     Dictionary<string,OnEventCompletedDelegateHandler> exitEvents = new Dictionary<string,OnEventCompletedDelegateHandler>();
@@ -27,35 +25,8 @@ public class MySceneManager : NetworkBehaviour
 
     [Rpc(SendTo.Server)]
     public void AddSceneRpc(string sceneName) {
-        NetworkManager.Singleton.SceneManager.LoadScene(sceneName,LoadSceneMode.Additive);
+        SceneEventProgressStatus s =  NetworkManager.Singleton.SceneManager.LoadScene(sceneName,LoadSceneMode.Additive);
     }
-
-    // public void AddExitSceneCallback(string sceneName,UnityAction callback) {
-    //     UnityAction<Scene> cb = (scene) => {
-    //         if (scene.name==sceneName) callback();
-    //     };
-        
-    //     if (exitEvents.ContainsKey(sceneName)) {
-    //         SceneManager.sceneUnloaded -= exitEvents[sceneName];
-    //     }
-
-    //     exitEvents[sceneName] = cb;
-    //     SceneManager.sceneUnloaded += cb;
-    // }
-
-    // public void AddEnterSceneCallback(string sceneName,UnityAction callback) {
-    //     UnityAction<Scene,LoadSceneMode> cb = (scene,loadSceneMode) => {
-    //         if (scene.name==sceneName) callback();
-    //     };
-        
-    //     if (enterEvents.ContainsKey(sceneName)) {
-    //         SceneManager.sceneLoaded -= enterEvents[sceneName];
-    //     }
-
-    //     enterEvents[sceneName] = cb;
-    //     SceneManager.sceneLoaded += cb;
-    // } 
-
    public void AddExitSceneCallback(string sceneName,UnityAction callback) {
         OnEventCompletedDelegateHandler cb = (scene,loadSceneMode,clientsCompleted,clientsTimedout) => {
             if (scene==sceneName) callback();

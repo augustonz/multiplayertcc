@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
-
+using Game;
 public static class UIActions
 {
     static Dictionary<string,UnityAction> ActionsDic = new Dictionary<string, UnityAction>() {
@@ -13,6 +12,8 @@ public static class UIActions
         { "leaveMatch",LeaveMatch},
         { "joinMatch",JoinMatch},
         { "spawnPlayer",SpawnPlayer},
+        { "endMatch",EndMatch},
+        { "crossLine",CrossLine},
     };
 
     static void EmptyAction() {
@@ -20,7 +21,20 @@ public static class UIActions
     }
 
     static void SpawnPlayer() {
-        GameController.Singleton.MyNetworkManager.SpawnPlayer();
+        Vector3 spawnPos =  new Vector3(0,1,0);
+        SpawnPoint spawnInScene = Object.FindAnyObjectByType<SpawnPoint>();
+        if (spawnInScene != null) {
+            spawnPos =  spawnInScene.transform.position;
+        }
+        GameController.Singleton.MyNetworkManager.SpawnPlayer(spawnPos);
+    }
+
+    static void EndMatch() {
+        GameController.Singleton.match.FinishRound();
+    }
+
+    static void CrossLine() {
+        GameController.Singleton.match.PlayerCrossedLine(MyNetworkManager.Singleton.LocalClientId);
     }
 
     static void StartServer() {

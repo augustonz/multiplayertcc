@@ -10,11 +10,12 @@ public class LobbyUI : NetworkBehaviour
     [SerializeField] TMP_Text PlayersReadyMsg;
     [SerializeField] TMP_Text PopupMsg;
     [SerializeField] TMP_Text readyPlayerButtonText;
-    [SerializeField] Button startMatchButton;
-    [SerializeField] Button readyPlayerButton;
-    [SerializeField] Button leaveButton;
     [SerializeField] RectTransform playerCaseContainer;
     public List<PlayerCase> playerCases;
+
+    bool isPopupActivated;
+    float popupRemainingTime;
+    const float POPUP_TIME = 5f;
 
     public override void OnNetworkSpawn()
     {
@@ -26,16 +27,31 @@ public class LobbyUI : NetworkBehaviour
         }
     }
 
+    public void SetPopupText(string text) {
+        popupRemainingTime = POPUP_TIME;
+        PopupMsg.text = text;
+        isPopupActivated = true;
+    }
+
+    void Update() {
+        if (isPopupActivated) {
+            popupRemainingTime-=Time.deltaTime;
+            if (popupRemainingTime<=0) {
+                isPopupActivated=false;
+                PopupMsg.text="";
+            }
+        }
+    }
+
     public void UpdateUI(LobbyData data) {
-        PlayersReadyMsg.text = $"X of X players ready";
-        PopupMsg.text = $"Sample pop-up txt";
-        readyPlayerButtonText.text = data.IsLocalPlayerReady? $"Unready" : "Ready";
+        PlayersReadyMsg.text = $"{data.ReadyPlayers}/{data.PlayersInLobby} ready";
+        readyPlayerButtonText.text = data.IsLocalPlayerReady()? $"Unready" : "Ready";
         UpdatePlayerCasesUI(data.playerCaseDatas);
     }
-    void UpdatePlayerCasesUI(List<PlayerCaseData> playerCasesDatas) {
-        for (int i = 0; i < playerCasesDatas.Count; i++)
+    void UpdatePlayerCasesUI(PlayerCaseData[] playerCasesDatas) {
+        for (int i = 0; i < playerCasesDatas.Length; i++)
         {
-            playerCases.ToArray()[i].UpdateUI(playerCasesDatas.ToArray()[i]);
+            playerCases.ToArray()[i].UpdateUI(playerCasesDatas[i]);
         }
     }
 }

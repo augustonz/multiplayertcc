@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Unity.Netcode;
 using System.Linq;
+using System;
 
 public class MyNetworkManager : NetworkManager
 {
@@ -17,19 +19,27 @@ public class MyNetworkManager : NetworkManager
         OnServerStarted += () => {
             if (!IsServer) return;
             GameController.Singleton.MySceneManager.AddEnterSceneCallback("Menu",GameController.Singleton.MyNetworkManager.Shutdown);
-            GameController.Singleton.MySceneManager.ChangeSceneRpc("Lobby");
+            SceneManager.OnLoadEventCompleted += AllClientsLoaded;
         };
     }
 
     void RegisterCommonCallbacks() {
         OnConnectionEvent += (manager,eventData) => {
             if (IsClient) {
-
+                switch (eventData.EventType) {
+                    case ConnectionEvent.ClientDisconnected:
+                        SceneManager.LoadScene("Menu",LoadSceneMode.Single);
+                        break;
+                    default:
+                        Debug.Log($"Unhandled {eventData.EventType} message received.");
+                        break;
+                }
             } else if (IsServer) {
                 switch (eventData.EventType) {
                     case ConnectionEvent.ClientConnected:
                         GameController.Singleton.lobby.AddToPlayersInLobby(eventData.ClientId);
                         break;
+                    
                     default:
                         Debug.Log($"Unhandled {eventData.EventType} message received.");
                         break;
@@ -47,6 +57,7 @@ public class MyNetworkManager : NetworkManager
     new public void StartServer() {
         RegisterServerCallbacks();
         bool isListening = base.StartServer();
+        GameController.Singleton.MySceneManager.ChangeSceneRpc("Lobby");
         Debug.Log($"{(isListening ? "Server is listening" : "Error, server is not listening")}");
     }
 
@@ -55,12 +66,24 @@ public class MyNetworkManager : NetworkManager
         base.StartClient();
     }
 
-    public void SpawnPlayer() {
-        networkSpawnHelper.SpawnPlayerRpc();
+    public void SpawnPlayer(Vector3 position) {
+        networkSpawnHelper.SpawnPlayerRpc(position);
     }
 
     public void Shutdown() {
         base.Shutdown();
+    }
+
+    void AllClientsLoaded(string sceneName, LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut) {
+        if (sceneName=="SampleScene" && loadSceneMode==LoadSceneMode.Single) {
+            GameController.Singleton.MySceneManager.AddSceneRpc("MatchGUI");
+            return;
+        }
+        if (sceneName=="MatchGUI" && loadSceneMode==LoadSceneMode.Additive) {
+            Debug.Log("All clients started the match!");
+            return;
+        }
+        
     }
 
     void ServerQuit(bool shouldStopMessages) {
