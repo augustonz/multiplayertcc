@@ -4351,12 +4351,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0.6
-  m_LookaheadSmoothing: 6
+  m_TrackedObjectOffset: {x: 0, y: 0.1, z: 0}
+  m_LookaheadTime: 0.682
+  m_LookaheadSmoothing: 2.2
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
-  m_YDamping: 1
+  m_XDamping: 2
+  m_YDamping: 2
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
@@ -4427,15 +4427,15 @@ MonoBehaviour:
   - startPosition: {x: 0, y: 0, z: 0}
     gameObject: {fileID: 1043879150}
     parralaxEffectX: 0.9
-    parralaxEffectY: 1
+    parralaxEffectY: 0.6
   - startPosition: {x: 0, y: 0, z: 0}
     gameObject: {fileID: 1437799159}
     parralaxEffectX: 0.7
-    parralaxEffectY: 1
+    parralaxEffectY: 0.3
   - startPosition: {x: 0, y: 0, z: 0}
     gameObject: {fileID: 193916941}
     parralaxEffectX: 0.55
-    parralaxEffectY: 1
+    parralaxEffectY: 0.1
   spriteWidth: 10
 --- !u!4 &463533106
 Transform:
@@ -4555,8 +4555,8 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.21562502
-    y: 0.0046296297
+    x: 0.18750001
+    y: 0.0037037036
     width: 0.33333334
     height: 0.3333333
   near clip plane: 0.3
@@ -4588,7 +4588,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0240646, y: 2.00961, z: -10}
+  m_LocalPosition: {x: -0.000016613305, y: 1.7997199, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4635,7 +4635,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
   m_Name: 
@@ -5127,12 +5127,12 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_StandbyUpdate: 2
+  m_StandbyUpdate: 1
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 3
+    OrthographicSize: 2.8125
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -5190,7 +5190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BoundingShape2D: {fileID: 1701647118}
-  m_Damping: 0.5
+  m_Damping: 3.23
   m_MaxWindowSize: -1
 --- !u!1 &1437799159
 GameObject:
@@ -5372,9 +5372,9 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -7.9748425, y: 9.177582}
-      - {x: -7.6095414, y: -2.3997583}
+      - {x: -7.974843, y: -2.392612}
       - {x: 50.42061, y: -2.3926115}
-      - {x: 50.31314, y: 9.341856}
+      - {x: 50.42061, y: 9.177582}
   m_UseDelaunayMesh: 0
 --- !u!4 &1701647119
 Transform:
