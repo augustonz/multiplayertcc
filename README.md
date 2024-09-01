@@ -2,10 +2,12 @@
 
 ## Implementation To-Do
 
-* Create match UI logic
-* Verify why player color in match aint working
+* Create match UI logic (Multiple Levels, )
+* Add SFXs (Start and win)
 * Create first stage
 * Test with players
+
+* Create SFXs (Death and small Powerup)
 
 ## Don't forget To-Do
 

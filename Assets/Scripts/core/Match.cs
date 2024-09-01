@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Threading;
 using Game;
 using Unity.Netcode;
@@ -13,6 +14,7 @@ public class Match : NetworkBehaviour
     float forceEndRoundTimer;
     bool hasWinner;
     bool hasFinished;
+    bool hasRaceStarted;
     MatchUI matchUIInternal;
     PlayerController localPlayer;
     public MatchUI matchUI { get => matchUIInternal; set {
@@ -28,8 +30,6 @@ public class Match : NetworkBehaviour
         }
         GameController.Singleton.match = this;
         matchData.OnValueChanged += OnMatchDataValueChange;
-        startRoundTimer = 0;
-        currentRoundTimer = startRoundTimer;
     }
 
     void OnMatchDataValueChange(MatchData prev,MatchData curr) {
@@ -38,42 +38,26 @@ public class Match : NetworkBehaviour
     }
 
     void Update() {
+        CommonUpdate();
+    }
+
+    void FixedUpdate() {
         if (IsServer) ServerUpdate();
         else if (IsClient) ClientUpdate();
-        
-        CommonUpdate();
+    }
+
+    void StartRace() {
+        startRoundTimer = 0;
+        currentRoundTimer = startRoundTimer;
+        hasRaceStarted = true;
     }
 
     public void PlayerDied(PlayerController playerController) {
         playerController.transform.position = playersSpawnPoint.transform.position;
     }
 
-    void ServerUpdate() {
-        currentRoundTimer+=Time.deltaTime;
-        if (hasWinner && currentRoundTimer>forceEndRoundTimer) ForceEndRound();
-    }
-
-    public 
-
-    void ClientUpdate() {
-        if (!hasFinished) currentRoundTimer+=Time.deltaTime;
-        if (localPlayer!=null) {
-            matchUI.UpdateDashTimer(localPlayer.DashFillPercentage);
-        }
-    }
-
     void CommonUpdate() {
         if (matchUI!=null) matchUI.UpdateSpeedrunTimer(currentRoundTimer);
-
-    }
-
-    public void SpawnedLocalPlayer(PlayerController playerObject) {
-        localPlayer = playerObject;
-
-        PlayerUI playerUI = playerObject.transform.GetComponentInChildren<PlayerUI>();
-        playerUI.SetName(matchData.Value.GetPlayerMatchData(playerObject.OwnerClientId).playerName.Value);
-        
-        cameraController.FollowPlayer(localPlayer.OwnerClientId);
     }
 
     public void PlayerCrossedLine(ulong clientId) {
@@ -85,24 +69,76 @@ public class Match : NetworkBehaviour
         }
     }
 
+    void LocalPlayerCrossedLine() {
+        hasFinished = true;
+    }
+
+    #region Client Code
+
+    void ClientUpdate() {
+        if (!hasRaceStarted) return;
+        if (!hasFinished) currentRoundTimer+=Time.deltaTime;
+        if (localPlayer!=null) {
+            matchUI.UpdateDashTimer(localPlayer.DashFillPercentage);
+        }
+    }
+
+    public void SpawnedLocalPlayer(PlayerController playerObject) {
+        localPlayer = playerObject;
+
+        PlayerUI playerUI = playerObject.transform.GetComponentInChildren<PlayerUI>();
+        playerUI.SetName(matchData.Value.GetPlayerMatchData(playerObject.OwnerClientId).playerName.Value);
+        
+        cameraController.FollowPlayer(localPlayer.OwnerClientId);
+    }
     void ForceEndRound() {
         Debug.Log("Round forced to end");
         FinishRound();
     }
+    public void FinishRound() {
+        localPlayer.EnablePlayerInput(false);
+        matchUI.EndMatchUI();
+    }
+    #endregion
 
+    #region Server Code
+    //This code runs after every player has loaded both the main scene and UI scene
+    //This might be more accurately called prepareRace
+    public void PrepareMatch() {
+        StartCoroutine(nameof(PrepareRace));
+    }
+
+    IEnumerator PrepareRace() {
+        yield return new WaitForSeconds(5f);
+        
+        SpawnAllPlayersInMatch();
+
+        matchUIInternal.PlayerStartRaceAnimation();
+        yield return new WaitForSeconds(8f);
+
+        //When match starts, activate player controls and the start of the race
+        StartRace();
+    }
+
+    void SpawnAllPlayersInMatch() {
+        SpawnPoint spawnInScene = FindAnyObjectByType<SpawnPoint>();
+        Vector2 spawnPos =  spawnInScene.transform.position;
+        foreach (PlayerMatchData item in matchData.Value.playersInMatch)
+        {
+            GameController.Singleton.MyNetworkManager.networkSpawnHelper.SpawnPlayerRpc(spawnPos,item.clientId);
+        } 
+    }
+    void ServerUpdate() {
+        if (!hasRaceStarted) return;
+        currentRoundTimer+=Time.deltaTime;
+        if (hasWinner && currentRoundTimer>forceEndRoundTimer) ForceEndRound();
+    }
     void FirstPlayerFinished() {
         hasWinner = true;
         forceEndRoundTimer = currentRoundTimer + 30;
     }
 
-    void LocalPlayerCrossedLine() {
-        hasFinished = true;
-    }
-
-    public void FinishRound() {
-        localPlayer.EnablePlayerInput(false);
-        matchUI.EndMatchUI();
-    }
+    #endregion
 
     #region ClientRPCs
     [Rpc(SendTo.NotServer)]

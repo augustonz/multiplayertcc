@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Unity.Netcode;
+using UnityEngine.Playables;
 
 public class MatchUI : NetworkBehaviour
 {
@@ -13,6 +14,7 @@ public class MatchUI : NetworkBehaviour
     [SerializeField] GameObject scoreBoard;
     [SerializeField] RectTransform playerMatchDataContainer;
     [SerializeField] Slider dashTimer;
+    [SerializeField] PlayableDirector startRaceCutscene;
     List<PlayerScoreUI> playerScoreUIs = new List<PlayerScoreUI>();
 
 
@@ -33,6 +35,10 @@ public class MatchUI : NetworkBehaviour
 
     public void UpdateDashTimer(float currPerc) {
         dashTimer.value = currPerc;
+    }
+
+    public void PlayerStartRaceAnimation() {
+        startRaceCutscene.Play();
     }
 
     public void EndMatchUI() {

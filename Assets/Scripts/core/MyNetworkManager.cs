@@ -80,7 +80,8 @@ public class MyNetworkManager : NetworkManager
             return;
         }
         if (sceneName=="MatchGUI" && loadSceneMode==LoadSceneMode.Additive) {
-            Debug.Log("All clients started the match!");
+            Debug.Log("All clients are ready to start the match!");
+            GameController.Singleton.match.PrepareMatch();
             return;
         }
         
