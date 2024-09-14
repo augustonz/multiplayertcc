@@ -7,6 +7,7 @@ public struct PlayerMatchData : INetworkSerializable, System.IEquatable<PlayerMa
     public FixedString128Bytes playerName;
     public FixedString128Bytes playerColor;
     public int score;
+    public bool readyForNext;
     public int currentRoundPlacement;
     public float currentRoundTimer;
     //Maybe create a list of round placements and timers per round. Like a history of past rounds
@@ -16,6 +17,7 @@ public struct PlayerMatchData : INetworkSerializable, System.IEquatable<PlayerMa
             clientId = 0,
             score = 0,
             currentRoundPlacement = 0,
+            readyForNext = false,
             currentRoundTimer = 0,
             playerColor = "blue",
             playerName = "",
@@ -23,11 +25,12 @@ public struct PlayerMatchData : INetworkSerializable, System.IEquatable<PlayerMa
         return player;
     }
 
-    public PlayerMatchData(ulong clientId, string playerName, string playerColor,int score,int currentRoundPlacement,float currentRoundTimer) {
+    public PlayerMatchData(ulong clientId, string playerName, string playerColor,int score,int currentRoundPlacement,float currentRoundTimer, bool readyForNext) {
         this.clientId = clientId;
         this.playerName = playerName;
         this.playerColor = playerColor;
         this.score = score;
+        this.readyForNext = readyForNext;
         this.currentRoundPlacement = currentRoundPlacement;
         this.currentRoundTimer = currentRoundTimer;
     }
@@ -47,6 +50,7 @@ public struct PlayerMatchData : INetworkSerializable, System.IEquatable<PlayerMa
             reader.ReadValueSafe(out score);
             reader.ReadValueSafe(out currentRoundPlacement);
             reader.ReadValueSafe(out currentRoundTimer);
+            reader.ReadValueSafe(out readyForNext);
         }
         else
         {
@@ -57,17 +61,18 @@ public struct PlayerMatchData : INetworkSerializable, System.IEquatable<PlayerMa
             writer.WriteValueSafe(score);
             writer.WriteValueSafe(currentRoundPlacement);
             writer.WriteValueSafe(currentRoundTimer);
+            writer.WriteValueSafe(readyForNext);
         }
     }
 
     public bool Equals(PlayerMatchData other)
     {
-        return clientId == other.clientId && playerName == other.playerName && playerColor == other.playerColor && score == other.score && currentRoundPlacement == other.currentRoundPlacement && currentRoundTimer == other.currentRoundTimer;
+        return clientId == other.clientId && playerName == other.playerName && playerColor == other.playerColor && readyForNext == other.readyForNext && score == other.score && currentRoundPlacement == other.currentRoundPlacement && currentRoundTimer == other.currentRoundTimer;
     }
 
     public override string ToString()
     {
-        string ans = $"clientId: {clientId}, playerName: {playerName},score: {score},playerColor: {playerColor},currentRoundPlacement: {currentRoundPlacement},currentRoundTimer: {currentRoundTimer}\n";
+        string ans = $"clientId: {clientId}, playerName: {playerName},score: {score},playerColor: {playerColor},currentRoundPlacement: {currentRoundPlacement},currentRoundTimer: {currentRoundTimer},readyForNext: {readyForNext}\n";
         return ans;
     }
 }

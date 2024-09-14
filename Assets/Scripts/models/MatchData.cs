@@ -19,16 +19,18 @@ public struct MatchData : INetworkSerializable, System.IEquatable<MatchData>
         
         return Util.IsEqualLists(playersInMatch,other.playersInMatch) && stageId==other.stageId && currentMatchRound==other.currentMatchRound && maxMatchRounds==other.maxMatchRounds;
     }
+    public int PlayersReadyForNext => playersInMatch.Where(data=>data.readyForNext).Count(); 
 
-    public void UpdatePlayerMatchData(ulong clientId, string playername = "", string playerColor = "blue", int score = -1, int currentRoundPlacement = -1, float currentRoundTimer = -1) {
+    public void UpdatePlayerMatchData(ulong clientId, string playername = "", string playerColor = "blue", int score = -1, int currentRoundPlacement = -1, float currentRoundTimer = -1, int isPlayerReady = -1) {
         int index = playersInMatch.FindIndex(matchData=>matchData.clientId==clientId);
         PlayerMatchData interm = playersInMatch[index];
 
-        if (playername!=null) interm.playerName = playername;
+        if (playername!="") interm.playerName = playername;
         if (playerColor!="blue") interm.playerColor = playerColor;
         if (score!=-1) interm.score = score;
         if (currentRoundPlacement!=-1) interm.currentRoundPlacement = currentRoundPlacement;
         if (currentRoundTimer!=-1) interm.currentRoundTimer = currentRoundTimer;
+        if (isPlayerReady!=-1) interm.readyForNext = isPlayerReady==1;
         
         playersInMatch[index] = interm;
     }

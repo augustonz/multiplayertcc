@@ -87,6 +87,6 @@ public class StaminaPickUp : NetworkBehaviour
         if (other.gameObject.tag != "Player") return;
         Debug.Log("Collision called on "  + (NetworkManager.IsServer ? "Server":"Client"));
         PlayerController playerController = other.gameObject.GetComponent<PlayerController>();
-        GetPickedUpRpc();
+        if (!IsServer) GetPickedUpRpc();
     }
 }

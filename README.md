@@ -1,20 +1,28 @@
 # multiplayertcc
 
 ## Implementation To-Do
+* Test 2 players joining a match locally
+* Test with actual players
 
-* Create match UI logic
+## Tecniques
+* Add client prediction
+* Add client prediction optionally
+* Add client reconciliation
+* Add client reconciliation optionally
+* Add Entity interpolation
+* Add Entity interpolation optionally
 
-* Verify why player color in match aint working
 
-* Expand background vertically so it doesnt bug out and add vertical parralax
-* Add audio
-* Add Animations
-* Add menu background
+## My personal To-Do
+* Create the toggle pixel art png
+* Fix audio mixing between SFXs and music (win is too quiet)
+* Create SFXs (Death and small Powerup)
+* Create Other levels
 
-* Make Camera Better
- 
-* Create first stage
-* Test with players
+## Player Feedback To-Do
+
+
+
 
 ## Don't forget To-Do
 

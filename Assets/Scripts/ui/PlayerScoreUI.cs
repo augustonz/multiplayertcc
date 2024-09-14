@@ -30,6 +30,7 @@ public class PlayerScoreUI : NetworkBehaviour
         playerName.text = playerMatchData.playerName.Value;
         playerTime.text = Util.formatMatchTime(playerMatchData.currentRoundTimer);
         playerScore.text = $"Score: {playerMatchData.score}";
+        playerImg.material = Util.getPlayerMaterialFromColor(playerMatchData.playerColor.Value);
     }
 
     void TurnOnElements(bool state) {

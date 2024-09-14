@@ -25,7 +25,13 @@ namespace Game {
 
         public Vector2 FrameInput => _frameInput.Move;
         public event Action<bool, float> GroundedChanged;
-        public event Action Jumped;
+        public event Action<bool> HitWallChanged;
+        public event Action<int, bool> Jumped;
+        public event Action<float> GotPowerUp;
+        public event Action Dashed;
+        public bool IsSliding => _isSliding;
+        public bool HasDoubleJump => _currentAirJumps > 0;
+        public bool IsGrounded => _grounded;
 
         #endregion
 
@@ -162,6 +168,14 @@ namespace Game {
                 GroundedChanged?.Invoke(false, 0);
             }
 
+            if ((rightWallHit || leftWallHit) && !isNextToWall) {
+                isNextToWall = true;
+                HitWallChanged(true);
+            } else if (!rightWallHit && !leftWallHit && isNextToWall) {
+                isNextToWall = false;
+                HitWallChanged(false);
+            }
+
             if (((rightWallHit && isFacingRight) || (leftWallHit && !isFacingRight)) && !IsWallJumping) {
                 _frameLastRightWall = _time;
             } 
@@ -209,18 +223,19 @@ namespace Game {
             _bufferedJumpUsable = false;
             _coyoteUsable = false;
             _frameVelocity.y = _stats.JumpPower;
-            Jumped?.Invoke();
+            Jumped?.Invoke(_currentAirJumps,false);
         }
 
         #endregion
 
         #region Wall Jumping
         bool IsWallJumping;
+        bool isNextToWall;
         float _frameLastRightWall;
         float _frameLastLeftWall;
         float _frameLastOnWall;
         float _wallJumpStartTime;
-        bool CanWallJump => IsSliding;
+        bool CanWallJump => _isSliding;
 
         private void HandleWallJump() {
             if (IsWallJumping && _time > _wallJumpStartTime + _stats.wallJumpDuration) IsWallJumping = false;
@@ -241,29 +256,27 @@ namespace Game {
 
             Vector2 newVelocity = new Vector2(_stats.wallJumpHorizontalForce,_stats.wallJumpVerticalForce);
             newVelocity.x *= jumpDir;
-            Debug.Log(newVelocity);
             _frameVelocity = newVelocity;
             IsWallJumping = true;
             _wallJumpStartTime=_time;
-            
-            Jumped?.Invoke();
+            Jumped?.Invoke(_currentAirJumps,true);
         }
 
         #endregion
 
         #region Sliding
         float _lastTimeSliding;
-        bool IsSliding;
+        bool _isSliding;
 
         bool JustFinishedSliding => _time < _lastTimeSliding + _stats.slidingToWallJumpBuffer;
         bool CanSlide => !IsWallJumping && !IsDashing && !_grounded && _time <= _frameLastOnWall + 0.1f;
         void HandleSlide() {
             if (CanSlide && ((_time <= _frameLastLeftWall + 0.1f && _frameInput.Move.x < 0) || (_time <= _frameLastRightWall + 0.1f && _frameInput.Move.x > 0))) {
-                IsSliding = true;
+                _isSliding = true;
                 _bufferedJumpUsable=true;
                 _lastTimeSliding = _time;
             } else {
-                IsSliding = false;
+                _isSliding = false;
             }
         }
 		#endregion
@@ -283,12 +296,13 @@ namespace Game {
         public void AddDashPercRpc(float perc)
         {
             dashTimer += perc * _stats.dashCooldown;
+            GotPowerUp.Invoke(perc);
         }
 
         private void ExecuteDash() {
+            Dashed.Invoke();
             Vector2 dashDirection = Vector2.zero;
-
-            if (_frameInput.Move.x==0 || IsSliding){
+            if (_frameInput.Move.x==0 || _isSliding){
                 dashDirection = isFacingRight ? Vector2.right : Vector2.left;
             } else if (_frameInput.Move.x != 0) {
                 dashDirection = _frameInput.Move.x > 0 ? Vector2.right : Vector2.left;
@@ -300,7 +314,6 @@ namespace Game {
         }
 
         private IEnumerator StartDash(Vector2 dir) {
-            
             _frameVelocity = dir * _stats.dashSpeed;
             dashTimer = 0;
 
@@ -317,7 +330,7 @@ namespace Game {
         {
             if (IsDashing) return;
             if (!_limitSpeedToMax) return;
-            if (IsSliding) {
+            if (_isSliding) {
                 _frameVelocity.x = 0;
                 return;
             }
@@ -336,7 +349,7 @@ namespace Game {
         {
             if (IsDashing) return;
 
-            if (IsSliding) {
+            if (_isSliding) {
                 if (_frameLastRightWall < _frameLastLeftWall) {
                     TurnRight();
                 } else if (_frameLastRightWall > _frameLastLeftWall) {
@@ -359,7 +372,7 @@ namespace Game {
             if (_grounded && _frameVelocity.y <= 0f)
             {
                 _frameVelocity.y = _stats.GroundingForce;
-            } else if (IsSliding && !_grounded) 
+            } else if (_isSliding && !_grounded) 
             {
                 _frameVelocity.y = Mathf.MoveTowards(_frameVelocity.y, -_stats.slidingSpeed, _stats.slidingDesaccel* Time.fixedDeltaTime);
             }
@@ -418,8 +431,13 @@ namespace Game {
     public interface IPlayerController
     {
         public event Action<bool, float> GroundedChanged;
-
-        public event Action Jumped;
+        public event Action<bool> HitWallChanged;
+        public event Action<int, bool> Jumped;
+        public event Action Dashed;
+        public event Action<float> GotPowerUp;
         public Vector2 FrameInput { get; }
+        public bool IsGrounded { get; }
+        public bool IsSliding { get; }
+        public bool HasDoubleJump { get; }
     }
 }

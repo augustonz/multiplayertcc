@@ -12,18 +12,14 @@ public class NetworkSpawnHelper : NetworkBehaviour
         DontDestroyOnLoad(this);
         base.OnNetworkSpawn();
     }
-    [Rpc(SendTo.Server)]
-    public void SpawnPlayerRpc(Vector3 position, RpcParams rpcParams = default) {
+    public void SpawnPlayer(Vector3 position, ulong clientId) {
         if (!enabled) return;
+        ulong clientIdToSpawn = clientId;
+        
         NetworkObject playerPrefab = PrefabsList.Singleton.GetNetworkPrefab("player");
 
         NetworkObject instantiated = Instantiate(playerPrefab, position, Quaternion.identity);
 
-        if (instantiated.gameObject.TryGetComponent<SpriteRenderer>(out var spriteRenderer))
-        {
-            string color = GameController.Singleton.match.matchData.Value.GetPlayerMatchData(rpcParams.Receive.SenderClientId).playerColor.Value;
-            spriteRenderer.material = Util.getPlayerMaterialFromColor(color);
-        }
-        instantiated.SpawnAsPlayerObject(rpcParams.Receive.SenderClientId);
+        instantiated.SpawnAsPlayerObject(clientIdToSpawn,true);
     }
 }

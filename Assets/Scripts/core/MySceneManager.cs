@@ -14,20 +14,36 @@ public class MySceneManager : NetworkBehaviour
     Dictionary<string,OnEventCompletedDelegateHandler> enterEvents = new Dictionary<string,OnEventCompletedDelegateHandler>();
     Dictionary<string,OnEventCompletedDelegateHandler> exitEvents = new Dictionary<string,OnEventCompletedDelegateHandler>();
 
-    public void Start() {
+    [SerializeField]
+    SerializableDict<ulong,string> _serialiableDict;
+    Dictionary<ulong,string> _stageIdToSceneNameDict;
+    void Awake() {
+        _stageIdToSceneNameDict = _serialiableDict.ToDictionary();
         DontDestroyOnLoad(this);
     }
 
-    [Rpc(SendTo.Server)]
+    public string GetRandomLevel() {
+        return _stageIdToSceneNameDict[(ulong)Random.Range(0,_stageIdToSceneNameDict.Count)];
+    }
+
+    public string GetLevelById(ulong id) {
+        Debug.Log($"level id is {id}");
+        Debug.Log($"dict is null = {_stageIdToSceneNameDict==null}");
+        return _stageIdToSceneNameDict[id];
+    }
+
+    public string GetNextLevel(ulong id) {
+        return _stageIdToSceneNameDict[id+1];
+    }
+
     public void ChangeSceneRpc(string sceneName) {
         NetworkManager.Singleton.SceneManager.LoadScene(sceneName,LoadSceneMode.Single);
     }
 
-    [Rpc(SendTo.Server)]
     public void AddSceneRpc(string sceneName) {
         SceneEventProgressStatus s =  NetworkManager.Singleton.SceneManager.LoadScene(sceneName,LoadSceneMode.Additive);
     }
-   public void AddExitSceneCallback(string sceneName,UnityAction callback) {
+    public void AddExitSceneCallback(string sceneName,UnityAction callback) {
         OnEventCompletedDelegateHandler cb = (scene,loadSceneMode,clientsCompleted,clientsTimedout) => {
             if (scene==sceneName) callback();
         };
@@ -50,7 +66,7 @@ public class MySceneManager : NetworkBehaviour
         }
 
         enterEvents[sceneName] = cb;
-       NetworkManager.Singleton. SceneManager.OnLoadEventCompleted += cb;
+        NetworkManager.Singleton.SceneManager.OnLoadEventCompleted += cb;
     } 
 
     public void ExitGame() {

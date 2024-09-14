@@ -4,8 +4,9 @@ public class GameInitializer : MonoBehaviour {
 
     [SerializeField] MyNetworkManager networkManager;
     [SerializeField] MySceneManager scenesManager;
+    [SerializeField] OptionsManager optionsManager;
 
-    void Start() {
+    void Awake() {
         if (GameController.Singleton!=null) {
             Destroy(networkManager.gameObject);
             Destroy(scenesManager.gameObject);
@@ -13,5 +14,7 @@ public class GameInitializer : MonoBehaviour {
         }
         GameController gc = new GameController(networkManager,scenesManager);
         gc.createSingleton();
+
+        optionsManager.GetInitialSoundValues();
     }
 }

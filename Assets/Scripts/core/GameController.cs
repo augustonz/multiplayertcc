@@ -24,7 +24,7 @@ public class GameController
         IsMatch = true;
 
         Match.GenerateMatchData(lobbyData);
-        MySceneManager.ChangeSceneRpc("SampleScene");
+        MySceneManager.ChangeSceneRpc("Level1");
     }
     
 
