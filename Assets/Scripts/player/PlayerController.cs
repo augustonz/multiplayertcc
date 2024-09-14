@@ -55,8 +55,6 @@ namespace Game {
             // Wallfilter.SetLayerMask(_stats.WallLayer);
 
             _cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
-            iaa["Jump"].Enable();
-            iaa["Walk"].Enable();
         }
 
         private void Update()

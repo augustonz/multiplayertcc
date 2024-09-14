@@ -50,7 +50,8 @@ public class Match : NetworkBehaviour
         GameController.Singleton.match = this;
         base.OnNetworkSpawn();
         if (IsServer) {
-            matchData.Value = generatedMatchData;
+            Debug.Log("Match On Network Spawn Called");
+            if (matchData.Value.Equals(MatchData.Empty())) matchData.Value = generatedMatchData;
         } else {
         }
         matchData.OnValueChanged += OnMatchDataValueChange;
@@ -114,7 +115,7 @@ public class Match : NetworkBehaviour
 
         // PlayerUI playerUI = localPlayer.transform.GetComponentInChildren<PlayerUI>();
         // playerUI.SetName(matchData.Value.GetPlayerMatchData(localPlayer.OwnerClientId).playerName.Value);
-        
+        Debug.Log(localPlayer.OwnerClientId);
         cameraController.FollowPlayer(localPlayer.OwnerClientId);
         localPlayer.EnablePlayerInput(false);
     }
