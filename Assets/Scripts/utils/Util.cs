@@ -37,8 +37,11 @@ public static class Util {
         if (matchTimer==0) {
             points = "000";
         } else {
-            Debug.Log(matchTimer);
             if (matchTimer != 0) {
+                Debug.Log(matchTimer);
+                Debug.Log(matchTimer.ToString());
+                Debug.Log(matchTimer.ToString().Split("."));
+
                 string decimals = matchTimer.ToString().Split(".")[1];
                 if (decimals.Length<3) {
                     points = decimals;

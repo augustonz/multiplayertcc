@@ -40,14 +40,14 @@ public class FinishLine : NetworkBehaviour
         GameController.Singleton.match.LocalPlayerCrossedLine(rpcParams.Receive.SenderClientId);
     }
 
-    void CheckLocally() {
-        GameController.Singleton.match.LocalPlayerCrossedLine(NetworkManager.Singleton.LocalClientId);
+    void CheckLocally(ulong playerClientId) {
+        if (playerClientId==NetworkManager.LocalClientId) GameController.Singleton.match.LocalPlayerCrossedLine(playerClientId);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
             PlayerController playerController = other.GetComponent<PlayerController>();
-            CheckLocally();
+            CheckLocally(playerController.OwnerClientId);
         }
     }
 }
