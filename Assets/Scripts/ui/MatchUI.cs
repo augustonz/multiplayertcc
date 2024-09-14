@@ -11,13 +11,12 @@ public class MatchUI : NetworkBehaviour
     [SerializeField] GameObject timer;
     [SerializeField] TMP_Text roundText;
     [SerializeField] TMP_Text timerText;
+    [SerializeField] TMP_Text nextRoundVotes;
     [SerializeField] GameObject scoreBoard;
     [SerializeField] RectTransform playerMatchDataContainer;
     [SerializeField] Slider dashTimer;
     [SerializeField] PlayableDirector startRaceCutscene;
     List<PlayerScoreUI> playerScoreUIs = new List<PlayerScoreUI>();
-
-
 
     public override void OnNetworkSpawn()
     {
@@ -58,7 +57,8 @@ public class MatchUI : NetworkBehaviour
     }
 
     public void UpdateUI(MatchData data) {
-        roundText.text = data.currentMatchRound.ToString();
+        roundText.text = $"Round {data.currentMatchRound}";
+        nextRoundVotes.text = $"({data.PlayersReadyForNext}/{data.PlayersInMatch})";
         UpdatePlayerScoresUI(data.playersInMatch);
     }
 

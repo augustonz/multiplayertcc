@@ -37,7 +37,15 @@ public static class Util {
         if (matchTimer==0) {
             points = "000";
         } else {
-            points = matchTimer.ToString().Split(".")[1].Substring(0,3);
+            string decimals = matchTimer.ToString().Split(".")[1];
+            if (decimals.Length<3) {
+                points = decimals;
+                while (points.Length<3) {
+                    points+="0";
+                }
+            } else {
+                points = decimals.Substring(0,3);
+            }
         }
         return $"{minutes}:{seconds}.{points}";
     }
@@ -65,7 +73,6 @@ public static class Util {
 
 
     private static int ColorToColorNum(string color) {
-        Debug.Log($"Color: {color}");
         switch(color) {
             case "blue":
                 return 1;

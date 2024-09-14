@@ -66,3 +66,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06892f4369b93874e9c7f19eb3f97574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _serialiableDict:
+    items:
+    - key: 1
+      value: Level1
+    - key: 2
+      value: SampleScene

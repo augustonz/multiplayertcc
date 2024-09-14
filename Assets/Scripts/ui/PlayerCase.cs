@@ -44,12 +44,9 @@ public class PlayerCase : NetworkBehaviour
     }
 
     void toggleSelected(bool newValue) {
-        Debug.Log("here");
         Toggle toggle = chooseColorGroup.ActiveToggles().Count() == 0 ? null : chooseColorGroup.ActiveToggles().ToArray()[0];
         if (toggle == null) return;
-        Debug.Log("here1");
         if (!newValue) {
-            Debug.Log("here2");
             toggle.SetIsOnWithoutNotify(true);
             return;
         }
@@ -70,7 +67,6 @@ public class PlayerCase : NetworkBehaviour
         chooseColorGroup.SetAllTogglesOff();
         chooseColorGroup.GetComponentsInChildren<Toggle>()[ColorToToggleIndex(data.playerColor.Value)].SetIsOnWithoutNotify(true);
         playerChar.material = Util.getPlayerMaterialFromColor(data.playerColor.Value);
-        Debug.Log($"Changing material to: {Util.getPlayerMaterialFromColor(data.playerColor.Value).name}");
         ownerTag.enabled = data.clientId == GameController.Singleton.MyNetworkManager.LocalClientId;
     }
 

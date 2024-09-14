@@ -12,16 +12,14 @@ public class NetworkSpawnHelper : NetworkBehaviour
         DontDestroyOnLoad(this);
         base.OnNetworkSpawn();
     }
-    [Rpc(SendTo.Server)]
-    public void SpawnPlayerRpc(Vector3 position, ulong clientId = 100000, RpcParams rpcParams = default) {
+    public void SpawnPlayer(Vector3 position, ulong clientId) {
         if (!enabled) return;
         ulong clientIdToSpawn = clientId;
-        if (clientId ==100000) clientIdToSpawn = rpcParams.Receive.SenderClientId;
         
         NetworkObject playerPrefab = PrefabsList.Singleton.GetNetworkPrefab("player");
 
         NetworkObject instantiated = Instantiate(playerPrefab, position, Quaternion.identity);
 
-        instantiated.SpawnAsPlayerObject(clientIdToSpawn);
+        instantiated.SpawnAsPlayerObject(clientIdToSpawn,true);
     }
 }

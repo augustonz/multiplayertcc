@@ -6,7 +6,7 @@ public class GameInitializer : MonoBehaviour {
     [SerializeField] MySceneManager scenesManager;
     [SerializeField] OptionsManager optionsManager;
 
-    void Start() {
+    void Awake() {
         if (GameController.Singleton!=null) {
             Destroy(networkManager.gameObject);
             Destroy(scenesManager.gameObject);

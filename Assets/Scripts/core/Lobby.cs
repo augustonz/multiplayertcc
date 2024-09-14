@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.Netcode;
 using System.Linq;
 using System;
+using Unity.Services.Multiplay;
 
 public class Lobby : NetworkBehaviour
 {
@@ -15,6 +16,9 @@ public class Lobby : NetworkBehaviour
         if (IsServer) {
             LobbyData val = LobbyData.Empty();
             lobbyData.Value = val;
+            #if DEDICATED_SERVER
+                StartAcceptingPlayers();
+            #endif
         } else  {
         }
 
@@ -26,6 +30,10 @@ public class Lobby : NetworkBehaviour
         UIController = GetComponent<LobbyUI>();
         UpdateLobbyUI(lobbyData.Value);
     }
+
+    async void StartAcceptingPlayers() {
+        await MultiplayService.Instance.ReadyServerForPlayersAsync();
+    } 
 
     public override void OnNetworkDespawn()
     {
@@ -76,7 +84,6 @@ public class Lobby : NetworkBehaviour
     }
 
     public void ChangePlayerColor(string newColor) {
-        Debug.Log($"Changing color to {newColor}");
         ChangePlayerColorRpc(newColor);
     }
 
@@ -171,5 +178,11 @@ public class Lobby : NetworkBehaviour
         return newCopy;
     }
 
+    void Update() {
+	{
+		
+	
+    }
+    }
 
 }

@@ -12,28 +12,26 @@ public class OptionsManager: MonoBehaviour {
     [SerializeField] Slider _musicSlider;
     [SerializeField] AudioMixerGroup _audioMixerGroup;
 
+    bool isFirstTimeChangingValues = true;
+
     public void GetInitialSoundValues() {
         _masterVolume = PersistenceManager.GetVolume("master");
         _sfxVolume = PersistenceManager.GetVolume("sfx");
         _musicVolume = PersistenceManager.GetVolume("music");
 
-        PersistenceManager.SetVolume("master",_masterVolume);
-        _audioMixerGroup.audioMixer.SetFloat("volumeMaster",_masterVolume);
-        _masterSlider.value = _masterVolume;
-
-        PersistenceManager.SetVolume("sfx",_sfxVolume);
-        _audioMixerGroup.audioMixer.SetFloat("volumeSFX",_sfxVolume);
-        _sfxSlider.value = _sfxVolume;
-
-        PersistenceManager.SetVolume("music",_musicVolume);
-        _audioMixerGroup.audioMixer.SetFloat("volumeMusic",_musicVolume);
-        _musicSlider.value = _musicVolume;
+        OnSFXChanged(_sfxVolume);
+        OnMasterChanged(_masterVolume);
+        OnMusicChanged(_musicVolume);
     }
 
     public void OnSFXChanged(float newValue) {
         PersistenceManager.SetVolume("sfx",newValue);
         _audioMixerGroup.audioMixer.SetFloat("volumeSFX",newValue);
         _sfxSlider.value = newValue;
+        if (isFirstTimeChangingValues) {
+            isFirstTimeChangingValues = false;
+            return;
+        }
         TestSFXVolume();
     }
 

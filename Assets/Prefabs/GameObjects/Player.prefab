@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6747519262991273101}
   - component: {fileID: 4046962705577281673}
   - component: {fileID: 7557496486611481014}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: PlayerName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 5242877862949205278}
   - component: {fileID: 6683161478236906440}
   - component: {fileID: 3972728712873471052}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
+  SceneMigrationSynchronization: 0
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
@@ -1372,13 +1372,13 @@ GameObject:
   - component: {fileID: 5440979420663222305}
   - component: {fileID: 6945450016738776353}
   - component: {fileID: 2297699233692181415}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: PlayerUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8814141670210681873
 RectTransform:
   m_ObjectHideFlags: 0

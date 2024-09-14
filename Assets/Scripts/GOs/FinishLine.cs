@@ -37,11 +37,11 @@ public class FinishLine : NetworkBehaviour
 
     [Rpc(SendTo.Server)]
     void CheckOnServerRpc(RpcParams rpcParams = default) {
-        GameController.Singleton.match.PlayerCrossedLine(rpcParams.Receive.SenderClientId);
+        GameController.Singleton.match.LocalPlayerCrossedLine(rpcParams.Receive.SenderClientId);
     }
 
     void CheckLocally() {
-        GameController.Singleton.match.PlayerCrossedLine(NetworkManager.Singleton.LocalClientId);
+        GameController.Singleton.match.LocalPlayerCrossedLine(NetworkManager.Singleton.LocalClientId);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
