@@ -38,7 +38,7 @@ namespace Game {
         private float _time;
 
         public override void OnNetworkSpawn() {
-            if (!IsOwner && !IsServer) Destroy(this);
+            if (!IsServer) Destroy(this);
             base.OnNetworkSpawn();
             GameController.Singleton.match.SpawnedLocalPlayer(this);
         } 
@@ -73,6 +73,10 @@ namespace Game {
         }
 
         public void EnablePlayerInput(bool isEnabled) {
+            if (!IsOwner) {
+                iaa.Disable();
+                return;
+            }
             if (isEnabled) {
                 iaa.Enable();
             } else {

@@ -37,14 +37,18 @@ public static class Util {
         if (matchTimer==0) {
             points = "000";
         } else {
-            string decimals = matchTimer.ToString().Split(".")[1];
-            if (decimals.Length<3) {
-                points = decimals;
-                while (points.Length<3) {
-                    points+="0";
+            if (matchTimer != 0) {
+                string decimals = matchTimer.ToString().Split(".")[1];
+                if (decimals.Length<3) {
+                    points = decimals;
+                    while (points.Length<3) {
+                        points+="0";
+                    }
+                } else {
+                    points = decimals.Substring(0,3);
                 }
             } else {
-                points = decimals.Substring(0,3);
+                points = "000";
             }
         }
         return $"{minutes}:{seconds}.{points}";
