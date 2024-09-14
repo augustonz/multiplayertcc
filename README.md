@@ -16,6 +16,7 @@
 ## My personal To-Do
 * Create the toggle pixel art png
 * Fix audio mixing between SFXs and music (win is too quiet)
+* Add Video resolution and fullscreen optionn
 * Create SFXs (Death and small Powerup)
 * Create Other levels
 
