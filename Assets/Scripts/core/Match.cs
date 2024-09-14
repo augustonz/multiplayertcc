@@ -44,13 +44,13 @@ public class Match : NetworkBehaviour
         {5,2},
         {6,1},
     };
-    public NetworkVariable<MatchData> matchData = new NetworkVariable<MatchData>(MatchData.Empty());
+    public NetworkVariable<MatchData> matchData;
     override public void OnNetworkSpawn() {
         if (GameController.Singleton.match!= null) Destroy(this);
         GameController.Singleton.match = this;
         base.OnNetworkSpawn();
+        matchData = new NetworkVariable<MatchData>(MatchData.Empty());
         if (IsServer) {
-            Debug.Log("Match On Network Spawn Called");
             if (matchData.Value.Equals(MatchData.Empty())) matchData.Value = generatedMatchData;
         } else {
         }
@@ -69,6 +69,7 @@ public class Match : NetworkBehaviour
         nextPlayerWinPos = 1;
     }
     void OnMatchDataValueChange(MatchData prev,MatchData curr) {
+        Debug.Log($"Previous current match {prev.currentMatchRound}, Current current match {curr.currentMatchRound}");
         if (matchUI!=null) matchUI.UpdateUI(curr);
     }
 
@@ -115,7 +116,6 @@ public class Match : NetworkBehaviour
 
         // PlayerUI playerUI = localPlayer.transform.GetComponentInChildren<PlayerUI>();
         // playerUI.SetName(matchData.Value.GetPlayerMatchData(localPlayer.OwnerClientId).playerName.Value);
-        Debug.Log(localPlayer.OwnerClientId);
         cameraController.FollowPlayer(localPlayer.OwnerClientId);
         localPlayer.EnablePlayerInput(false);
     }
@@ -168,13 +168,7 @@ public class Match : NetworkBehaviour
         Vector2 spawnPos =  spawnInScene.transform.position;
         foreach (PlayerMatchData item in matchData.Value.playersInMatch)
         {
-            // if (matchData.Value.currentMatchRound>1) {
-            //     SetAllPlayersToSpawnPointRpc(spawnPos);
-            //     return;
-            // } else {
-                Debug.Log("Spawned player");
-                GameController.Singleton.MyNetworkManager.networkSpawnHelper.SpawnPlayer(spawnPos,item.clientId);
-            //}
+            GameController.Singleton.MyNetworkManager.networkSpawnHelper.SpawnPlayer(spawnPos,item.clientId);
         } 
         
     }
@@ -196,8 +190,6 @@ public class Match : NetworkBehaviour
 
     IEnumerator GoNextRound() {
         yield return new WaitForSeconds(3);
-
-
         SetPropertiesOnNewRound();
         MatchData newMatchData = GenerateNextRoundMatchData();
         matchData.Value = newMatchData;
@@ -206,9 +198,11 @@ public class Match : NetworkBehaviour
     }
 
     void ForceEndRound() {
-        Debug.Log("Round forced to end");
+        hasRaceStarted=false;
         hasEnded = true;
         NotifyRoundEndedRpc();
+        StartCoroutine(nameof(GoNextRound));
+
     }
     
     void FirstPlayerFinished() {

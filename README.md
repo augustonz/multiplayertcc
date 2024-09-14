@@ -17,6 +17,7 @@
 * Create the toggle pixel art png
 * Fix audio mixing between SFXs and music (win is too quiet)
 * Add Video resolution and fullscreen option
+* Create sign pointing right and down pixel art
 * When typing name on lobby, stop updating values overriden what is being typed
 * Create SFXs (Death and small Powerup)
 * Create Other levels
