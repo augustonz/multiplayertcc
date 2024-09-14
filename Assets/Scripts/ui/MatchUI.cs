@@ -64,10 +64,12 @@ public class MatchUI : NetworkBehaviour
     }
 
     void UpdatePlayerScoresUI(List<PlayerMatchData> playerMatchDatas) {
-        List<PlayerMatchData> orderedList = playerMatchDatas.OrderBy(data=>data.score).ToList();
+        Debug.Log(playerMatchDatas[0].playerName);
+        playerMatchDatas.Sort((x, y) => x.score.CompareTo(y.score));
+        Debug.Log(playerMatchDatas[0].playerName);
         for (int i = 0; i < playerScoreUIs.Count; i++)
         {
-            playerScoreUIs[i].UpdateUI(i<playerMatchDatas.Count ? orderedList[i] : PlayerMatchData.Empty());
+            playerScoreUIs[i].UpdateUI(i<playerMatchDatas.Count ? playerMatchDatas[i] : PlayerMatchData.Empty());
         }
     }
 }
