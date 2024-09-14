@@ -38,9 +38,8 @@ namespace Game {
         private float _time;
 
         public override void OnNetworkSpawn() {
-            if (IsServer) Destroy(this);
             base.OnNetworkSpawn();
-            if (IsOwner) GameController.Singleton.match.SpawnedLocalPlayer(this);
+            if (IsOwner && !IsServer) GameController.Singleton.match.SpawnedLocalPlayer(this);
         } 
 
         private void Awake()
