@@ -17,9 +17,10 @@
 * Create the toggle pixel art png
 * Fix audio mixing between SFXs and music (win is too quiet)
 * Add Video resolution and fullscreen option
-* Create sign pointing right and down pixel art
+* Fix Error debug logs involving animation layers
 * When typing name on lobby, stop updating values overriden what is being typed
 * Create SFXs (Death and small Powerup)
+* Create sign pointing right and down pixel art
 * Create Other levels
 * Add end screen when match is over
 
