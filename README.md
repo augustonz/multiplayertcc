@@ -1,17 +1,16 @@
 # multiplayertcc
 
 ## Implementation To-Do
-* Test 2 players joining a match locally
 * Test with actual players
-
-## Tecniques
 * Add client prediction
 * Add client prediction optionally
 * Add client reconciliation
 * Add client reconciliation optionally
 * Add Entity interpolation
 * Add Entity interpolation optionally
-
+* Add artificial lag
+* Add artificial lag optionally
+* Test with actual players
 
 ## My personal To-Do
 * Create the toggle pixel art png
