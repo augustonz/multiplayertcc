@@ -27,8 +27,6 @@ public class MySceneManager : NetworkBehaviour
     }
 
     public string GetLevelById(ulong id) {
-        Debug.Log($"level id is {id}");
-        Debug.Log($"dict is null = {_stageIdToSceneNameDict==null}");
         return _stageIdToSceneNameDict[id];
     }
 

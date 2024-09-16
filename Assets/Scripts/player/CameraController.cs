@@ -4,16 +4,14 @@ using System.Linq;
 using Unity.Netcode;
 using Cinemachine;
 
-public class CameraController: NetworkBehaviour {
+public class CameraController: MonoBehaviour {
 
     [SerializeField] bool isOnline = true;
     [SerializeField] CinemachineVirtualCamera virtualCamera;
     CinemachineBrain brain;
 
-    public override void OnNetworkSpawn()
+    public void Start()
     {
-        base.OnNetworkSpawn();
-        if (IsServer) Destroy(this);
         Camera.main.TryGetComponent<CinemachineBrain>(out var brain);
         this.brain = brain;
     }

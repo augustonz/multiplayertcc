@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using Unity.Netcode;
 using UnityEngine.Playables;
+using System.Linq;
 
 public class MatchUI : NetworkBehaviour
 {
@@ -63,6 +64,7 @@ public class MatchUI : NetworkBehaviour
     }
 
     void UpdatePlayerScoresUI(List<PlayerMatchData> playerMatchDatas) {
+        playerMatchDatas.Sort((x, y) => y.score.CompareTo(x.score));
         for (int i = 0; i < playerScoreUIs.Count; i++)
         {
             playerScoreUIs[i].UpdateUI(i<playerMatchDatas.Count ? playerMatchDatas[i] : PlayerMatchData.Empty());

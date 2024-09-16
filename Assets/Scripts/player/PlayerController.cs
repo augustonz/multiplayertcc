@@ -38,9 +38,12 @@ namespace Game {
         private float _time;
 
         public override void OnNetworkSpawn() {
-            if (!IsServer) Destroy(this);
             base.OnNetworkSpawn();
-            GameController.Singleton.match.SpawnedLocalPlayer(this);
+            if (IsOwner && !IsServer) {
+                GameController.Singleton.match.SpawnedLocalPlayer(this);
+                FindFirstObjectByType<CameraController>().FollowPlayer(OwnerClientId);
+            }
+
         } 
 
         private void Awake()
@@ -56,8 +59,6 @@ namespace Game {
             // Wallfilter.SetLayerMask(_stats.WallLayer);
 
             _cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
-            iaa["Jump"].Enable();
-            iaa["Walk"].Enable();
         }
 
         private void Update()
@@ -75,7 +76,6 @@ namespace Game {
         public void EnablePlayerInput(bool isEnabled) {
             if (!IsOwner) {
                 iaa.Disable();
-                return;
             }
             if (isEnabled) {
                 iaa.Enable();

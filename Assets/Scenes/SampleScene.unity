@@ -4469,6 +4469,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4652,6 +4653,20 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 310458de93ce14001bfb0b6abcddde9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnline: 1
+  virtualCamera: {fileID: 1430191032}
 --- !u!1 &631967565
 GameObject:
   m_ObjectHideFlags: 0
@@ -5755,17 +5770,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 849ce80639af34308a273a41b34570ad, type: 3}
---- !u!114 &2889797408179542306 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7979235424973378149, guid: 849ce80639af34308a273a41b34570ad, type: 3}
-  m_PrefabInstance: {fileID: 2889797408179542305}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48659bf3eca3e457690f84097d99289f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5543345718933432076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5831,116 +5835,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2af88d201e09e4c36b1f40e31ca7f4af, type: 3}
---- !u!1001 &8758461509874351106
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1445673296334002288, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: GlobalObjectIdHash
-      value: 2423911724
-      objectReference: {fileID: 0}
-    - target: {fileID: 1445673296334002288, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: ActiveSceneSynchronization
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1445673296334002288, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: InScenePlacedSourceGlobalObjectIdHash
-      value: 3293031118
-      objectReference: {fileID: 0}
-    - target: {fileID: 2813799216546084677, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2813799216546084677, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: cameraController
-      value: 
-      objectReference: {fileID: 8758461509874351108}
-    - target: {fileID: 2813799216546084677, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: playersSpawnPoint
-      value: 
-      objectReference: {fileID: 2889797408179542306}
-    - target: {fileID: 4475007183165605504, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: m_Name
-      value: MatchController
-      objectReference: {fileID: 0}
-    - target: {fileID: 6056602446497428666, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6056602446497428666, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6056602446497428666, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6056602446497428666, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6056602446497428666, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6056602446497428666, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6056602446497428666, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6056602446497428666, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6056602446497428666, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6056602446497428666, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4475007183165605504, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8758461509874351108}
-  m_SourcePrefab: {fileID: 100100000, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
---- !u!1 &8758461509874351107 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4475007183165605504, guid: 3514aff1e7a55264da073a43b8a8a008, type: 3}
-  m_PrefabInstance: {fileID: 8758461509874351106}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8758461509874351108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8758461509874351107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 310458de93ce14001bfb0b6abcddde9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnline: 1
-  virtualCamera: {fileID: 1430191032}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2053149037}
   - {fileID: 463533106}
-  - {fileID: 8758461509874351106}
   - {fileID: 48228247}
   - {fileID: 1218983165}
   - {fileID: 2889797408179542305}
