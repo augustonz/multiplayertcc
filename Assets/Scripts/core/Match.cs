@@ -298,17 +298,17 @@ public class Match : NetworkBehaviour
     }
 
     public MatchData GenerateNextRoundMatchData() {
-        MatchData newMatchData = GetCopy(matchData.Value);
+        MatchData newRoundData = GetCopy(matchData.Value);
 
         matchData.Value.playersInMatch.ForEach(p=>
         {
-            newMatchData.UpdatePlayerMatchData(p.clientId,isPlayerReady: 0);
+            newRoundData.UpdatePlayerMatchData(p.clientId,isPlayerReady: 0,currentRoundTimer: 0);
         });
 
-        newMatchData.currentMatchRound+=1;
-        newMatchData.stageId+=1;
+        newRoundData.currentMatchRound+=1;
+        newRoundData.stageId+=1;
 
-        return newMatchData;
+        return newRoundData;
     }
 
     MatchData GetCopy(MatchData original) {
