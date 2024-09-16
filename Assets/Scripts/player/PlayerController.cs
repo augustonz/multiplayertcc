@@ -39,7 +39,11 @@ namespace Game {
 
         public override void OnNetworkSpawn() {
             base.OnNetworkSpawn();
-            if (IsOwner && !IsServer) GameController.Singleton.match.SpawnedLocalPlayer(this);
+            if (IsOwner && !IsServer) {
+                GameController.Singleton.match.SpawnedLocalPlayer(this);
+                FindFirstObjectByType<CameraController>().FollowPlayer(OwnerClientId);
+            }
+
         } 
 
         private void Awake()

@@ -21,6 +21,7 @@
 * When typing name on lobby, stop updating values overriden what is being typed
 * Create SFXs (Death and small Powerup)
 * Create Other levels
+* Add end screen when match is over
 
 
 ## Player Feedback To-Do

@@ -9,8 +9,6 @@ using UnityEngine;
 public class Match : NetworkBehaviour
 {
     static MatchData generatedMatchData;
-    [SerializeField] CameraController cameraController;
-    [SerializeField] SpawnPoint playersSpawnPoint;
 
     #region Common Properties
     float startRoundTimer;
@@ -44,17 +42,18 @@ public class Match : NetworkBehaviour
         {5,2},
         {6,1},
     };
-    public NetworkVariable<MatchData> matchData;
+    public NetworkVariable<MatchData> matchData = new NetworkVariable<MatchData>(MatchData.Empty());
+
     override public void OnNetworkSpawn() {
         if (GameController.Singleton.match!= null) Destroy(this);
         GameController.Singleton.match = this;
         base.OnNetworkSpawn();
-        matchData = new NetworkVariable<MatchData>(MatchData.Empty());
         if (IsServer) {
             if (matchData.Value.Equals(MatchData.Empty())) matchData.Value = generatedMatchData;
         } else {
         }
         matchData.OnValueChanged += OnMatchDataValueChange;
+        DontDestroyOnLoad(this);
     }
 
     void SetPropertiesOnNewRound() {
@@ -83,7 +82,8 @@ public class Match : NetworkBehaviour
     }
 
     public void PlayerDied(PlayerController playerController) {
-        playerController.transform.position = playersSpawnPoint.transform.position;
+        SpawnPoint spawnInScene = FindAnyObjectByType<SpawnPoint>();
+        playerController.transform.position = spawnInScene.transform.position;
     }
 
     void CommonUpdate() {
@@ -116,7 +116,6 @@ public class Match : NetworkBehaviour
 
         // PlayerUI playerUI = localPlayer.transform.GetComponentInChildren<PlayerUI>();
         // playerUI.SetName(matchData.Value.GetPlayerMatchData(localPlayer.OwnerClientId).playerName.Value);
-        cameraController.FollowPlayer(localPlayer.OwnerClientId);
         localPlayer.EnablePlayerInput(false);
     }
 
@@ -191,6 +190,7 @@ public class Match : NetworkBehaviour
     IEnumerator GoNextRound() {
         yield return new WaitForSeconds(3);
         SetPropertiesOnNewRound();
+        SetPropertiesOnNewRoundRpc();
         MatchData newMatchData = GenerateNextRoundMatchData();
         matchData.Value = newMatchData;
         string newSceneName = GameController.Singleton.MySceneManager.GetLevelById(newMatchData.stageId);
@@ -216,6 +216,11 @@ public class Match : NetworkBehaviour
     [Rpc(SendTo.NotServer)]
     void NotifyRoundEndedRpc() {
         FinishRound();
+    }
+
+    [Rpc(SendTo.NotServer)]
+    void SetPropertiesOnNewRoundRpc() {
+        SetPropertiesOnNewRound();
     }
 
     [Rpc(SendTo.NotServer)]
@@ -294,6 +299,11 @@ public class Match : NetworkBehaviour
 
     public MatchData GenerateNextRoundMatchData() {
         MatchData newMatchData = GetCopy(matchData.Value);
+
+        matchData.Value.playersInMatch.ForEach(p=>
+        {
+            newMatchData.UpdatePlayerMatchData(p.clientId,isPlayerReady: 0);
+        });
 
         newMatchData.currentMatchRound+=1;
         newMatchData.stageId+=1;
