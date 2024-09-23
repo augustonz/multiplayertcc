@@ -1,6 +1,14 @@
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+
+[System.Serializable]
+public class ScreenResolution {
+    public int Height;
+    public int Width;
+}
 public class OptionsManager: MonoBehaviour {
 
     private float _masterVolume; 
@@ -11,9 +19,32 @@ public class OptionsManager: MonoBehaviour {
     [SerializeField] Slider _masterSlider;
     [SerializeField] Slider _musicSlider;
     [SerializeField] AudioMixerGroup _audioMixerGroup;
+    [SerializeField] Toggle _isFullscreen;
+    [SerializeField] TMP_Dropdown _resolutionDropdown;
+    [SerializeField] List<ScreenResolution> _resolutions;
 
     bool isFirstTimeChangingValues = true;
     bool isFirstSecondTimeChangingValues = true;
+
+    void Start() {
+        _isFullscreen.isOn = PlayerPrefs.GetInt("isFullscreen",1) == 1 ;
+
+        _resolutions.ForEach((res)=>{
+            _resolutionDropdown.AddOptions(new List<TMP_Dropdown.OptionData> {
+                new TMP_Dropdown.OptionData {
+                    text = $"{res.Width} x {res.Height}"
+                }
+            });
+        });
+
+        _resolutionDropdown.value = PlayerPrefs.GetInt("resolution",0);
+    }
+
+    public void GetInitialVideoValues() {
+        Screen.fullScreen = PlayerPrefs.GetInt("isFullscreen",1) == 1 ;
+        ScreenResolution resolution  = _resolutions[PlayerPrefs.GetInt("resolution",0)];
+        Screen.SetResolution(resolution.Width,resolution.Height,Screen.fullScreenMode);
+    }
 
     public void GetInitialSoundValues() {
         _masterVolume = PersistenceManager.GetVolume("master");
@@ -23,6 +54,17 @@ public class OptionsManager: MonoBehaviour {
         OnSFXChanged(_sfxVolume);
         OnMasterChanged(_masterVolume);
         OnMusicChanged(_musicVolume);
+    }
+
+    public void UpdateFullscreen(bool newValue) {
+        Screen.fullScreen = newValue;
+        PlayerPrefs.SetInt("isFullscreen",newValue?1:0);
+    }
+
+    public void UpdateResolution(int newIndex) {
+        PlayerPrefs.SetInt("resolution",newIndex);
+        ScreenResolution resolution = _resolutions[newIndex];
+        Screen.SetResolution(resolution.Width,resolution.Height,Screen.fullScreenMode);
     }
 
     public void OnSFXChanged(float newValue) {

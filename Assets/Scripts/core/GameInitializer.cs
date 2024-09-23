@@ -5,6 +5,7 @@ public class GameInitializer : MonoBehaviour {
 
     [SerializeField] MyNetworkManager networkManager;
     [SerializeField] MySceneManager scenesManager;
+    [SerializeField] OptionsManager optionsManager;
     [SerializeField] bool artificialLatency;
     [SerializeField] bool clientPrediction;
     [SerializeField] bool serverReconciliation;
@@ -18,6 +19,7 @@ public class GameInitializer : MonoBehaviour {
         }
         GameController gc = new GameController(networkManager,scenesManager);
         gc.createSingleton();
+        optionsManager.GetInitialVideoValues();
 
         Variables.hasArtificialLag = artificialLatency;
         Variables.hasClientSidePrediction = clientPrediction;

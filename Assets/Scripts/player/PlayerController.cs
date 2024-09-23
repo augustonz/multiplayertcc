@@ -46,6 +46,14 @@ namespace Game {
         public event Action<bool, float> GroundedChanged;
         public event Action<bool> HitWallChanged;
         public event Action<int, bool> Jumped;
+        bool ShouldGroundChanged;
+
+        bool ShouldHitWallChanged;
+        bool HitWallChangedIsEnterWall;
+
+        bool ShouldJumped;
+        bool JumpedIsWallJump;
+
         public event Action<float> GotPowerUp;
         public event Action Dashed;
         public bool IsSliding => _isSliding;
@@ -338,6 +346,17 @@ namespace Game {
                 finalSpeed = _rb.velocity,
                 hasDashed = DashWasPressedOnUpdate && IsDashing,
                 inputMoved = !isTrivialInput(input),
+
+                lastInputDirection = input.moveInput,
+                isSliding = _isSliding,
+                isGrounded = _grounded,
+                airJumps = _currentAirJumps,
+
+                shouldTriggerGroundChange = ShouldGroundChanged,
+                shouldTriggerHitWall = ShouldHitWallChanged,
+                isEnteringWall = HitWallChangedIsEnterWall,
+                shouldTriggerJumped = ShouldJumped,
+                isWallJump = JumpedIsWallJump
             };
 
             RemoveOldInputs();
@@ -401,8 +420,23 @@ namespace Game {
                 transform.position = currentServerPlayerState.Value.finalPos;
                 transform.rotation = currentServerPlayerState.Value.finalRot;
                 _rb.velocity = currentServerPlayerState.Value.finalSpeed;
+                
+                TriggerAnimations(currentServerPlayerState.Value);
+
                 if (!Variables.hasClientSidePrediction) Physics2D.Simulate(Time.fixedDeltaTime);
             }
+        }
+
+        void TriggerAnimations(PlayerState state) {
+            if (state.hasDashed) Dashed.Invoke();
+            _frameInput.Move = state.lastInputDirection;
+            _isSliding = state.isSliding;
+            _grounded = state.isGrounded;
+            _currentAirJumps = state.airJumps;
+
+            Jumped.Invoke(_currentAirJumps,state.isWallJump);
+            HitWallChanged.Invoke(state.isEnteringWall);
+            GroundedChanged.Invoke(_grounded,0);
         }
 
         private void FixedUpdate()
@@ -437,7 +471,6 @@ namespace Game {
         private ContactFilter2D Floorfilter;
         private ContactFilter2D Wallfilter;
         private bool isFacingRight = true;
-
         private void CheckCollisions()
         {
             // Ground, Wall and Ceiling
@@ -450,6 +483,7 @@ namespace Game {
             // Hit a Ceiling
             if (ceilingHit) _frameVelocity.y = Mathf.Min(0, _frameVelocity.y);
             
+            ShouldGroundChanged = false;
             // Landed on the Ground
             if (!_grounded && groundHit)
             {
@@ -459,6 +493,7 @@ namespace Game {
                 _endedJumpEarly = false;
                 _currentAirJumps = _stats.AirJumps;
                 GroundedChanged?.Invoke(true, Mathf.Abs(_frameVelocity.y));
+                ShouldGroundChanged = true;
             }
             // Left the Ground
             else if (_grounded && !groundHit)
@@ -466,14 +501,21 @@ namespace Game {
                 _grounded = false;
                 _frameLeftGrounded = _time;
                 GroundedChanged?.Invoke(false, 0);
+                ShouldGroundChanged = true;
             }
+
+            ShouldHitWallChanged = false;
 
             if ((rightWallHit || leftWallHit) && !isNextToWall) {
                 isNextToWall = true;
                 HitWallChanged(true);
+                ShouldHitWallChanged = true;
+                HitWallChangedIsEnterWall = true;
             } else if (!rightWallHit && !leftWallHit && isNextToWall) {
                 isNextToWall = false;
                 HitWallChanged(false);
+                ShouldHitWallChanged = true;
+                HitWallChangedIsEnterWall = false;
             }
 
             if (((rightWallHit && isFacingRight) || (leftWallHit && !isFacingRight)) && !IsWallJumping) {
@@ -505,6 +547,7 @@ namespace Game {
 
         private void HandleJump()
         {
+            ShouldJumped = false;
             if (!_endedJumpEarly && !_grounded && !_frameInput.JumpHeld && _rb.velocity.y > 0) _endedJumpEarly = true;
 
             if (!_jumpToConsume && !HasBufferedJump) return;
@@ -522,7 +565,10 @@ namespace Game {
             _bufferedJumpUsable = false;
             _coyoteUsable = false;
             _frameVelocity.y = _stats.JumpPower;
+                
             Jumped?.Invoke(_currentAirJumps,false);
+            ShouldJumped = true;
+            JumpedIsWallJump = false;
         }
 
         #endregion
@@ -558,7 +604,10 @@ namespace Game {
             _frameVelocity = newVelocity;
             IsWallJumping = true;
             _wallJumpStartTime=_time;
+
             Jumped?.Invoke(_currentAirJumps,true);
+            ShouldJumped = true;
+            JumpedIsWallJump = true;
         }
 
         #endregion
@@ -726,9 +775,9 @@ namespace Game {
         public event Action<int, bool> Jumped;
         public event Action Dashed;
         public event Action<float> GotPowerUp;
-        public Vector2 FrameInput { get; }
-        public bool IsGrounded { get; }
-        public bool IsSliding { get; }
-        public bool HasDoubleJump { get; }
+        public Vector2 FrameInput { get;}
+        public bool IsGrounded { get;}
+        public bool IsSliding { get;}
+        public bool HasDoubleJump { get;}
     }
 }

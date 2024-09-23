@@ -1,6 +1,7 @@
 # multiplayertcc
 
 ## Implementation To-Do
+* Add Video resolution and fullscreen option
 * Make animations work even without client prediction. (and on the other players)
 * Test locally on dedicated server
 * Test with actual players
@@ -9,7 +10,6 @@
 ## My personal To-Do
 * Create the toggle pixel art png
 * Fix audio mixing between SFXs and music (win is too quiet)
-* Add Video resolution and fullscreen option
 * Fix Error debug logs involving animation layers
 * When typing name on lobby, stop updating values overriden what is being typed
 * Create SFXs (Death and small Powerup)
