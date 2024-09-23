@@ -192,7 +192,7 @@ public class Match : NetworkBehaviour
 
         Variables.hasClientSidePrediction = leftover != 3;
         Variables.hasServerReconciliation = leftover == 2 || leftover == 0;
-        Variables.hasEntityInterpolation = false;
+        Variables.hasEntityInterpolation = true;
        // Variables.hasEntityInterpolation = leftover == 3 || leftover == 0;
         Variables.hasArtificialLag = currentRound>4;
 

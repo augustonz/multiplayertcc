@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1269065970
+  GlobalObjectIdHash: 3419434319
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -299,7 +299,5138 @@ MonoBehaviour:
   _limitSpeedToMax: 1
   _reconciliationGhostClient: {fileID: 7673736370659441987}
   _reconciliationGhostServer: {fileID: 8626331946527560812}
-  maxPosError: 5
+  _seeReconciliationGhosts: 0
+  serverTimeStep: 0.1
+  maxPosError: 0.5
+  _inputStates:
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  currentServerPlayerState:
+    m_InternalValue:
+      tick: 0
+      finalPos: {x: 0, y: 0, z: 0}
+      finalRot: {x: 0, y: 0, z: 0, w: 0}
+      finalSpeed: {x: 0, y: 0, z: 0}
+      hasDashed: 0
+      inputMoved: 0
 --- !u!70 &5368106535040874987
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -274,10 +274,10 @@ namespace Game {
 
         [Rpc(SendTo.Server)]
         private void MoveOnServerRpc(InputState receivedInput) {
-            if (Variables.hasEntityInterpolation) {
-                _serverInputQueue.Enqueue(receivedInput);
-                return;
-            }
+            // if (Variables.hasEntityInterpolation) {
+            //     _serverInputQueue.Enqueue(receivedInput);
+            //     return;
+            // }
 
             if (lastReceivedTick + 1 != receivedInput.tick) {
                 Debug.LogError("Tick Received out of order");
