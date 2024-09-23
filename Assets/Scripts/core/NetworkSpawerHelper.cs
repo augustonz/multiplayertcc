@@ -16,7 +16,8 @@ public class NetworkSpawnHelper : NetworkBehaviour
         if (!enabled) return;
         ulong clientIdToSpawn = clientId;
         
-        NetworkObject playerPrefab = PrefabsList.Singleton.GetNetworkPrefab("player");
+        // NetworkObject playerPrefab = PrefabsList.Singleton.GetNetworkPrefab("player");
+        NetworkObject playerPrefab = PrefabsList.Singleton.GetNetworkPrefab("predictivePlayer");
 
         NetworkObject instantiated = Instantiate(playerPrefab, position, Quaternion.identity);
 

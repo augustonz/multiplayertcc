@@ -5,6 +5,7 @@ using UnityEngine;
 public class PrefabsList : MonoBehaviour
 {
     [SerializeField] NetworkObject playerPrefab;
+    [SerializeField] NetworkObject predictivePlayerPrefab;
     Dictionary<string,NetworkObject> prefabs = new Dictionary<string, NetworkObject>();
     static public PrefabsList Singleton;
 
@@ -12,7 +13,8 @@ public class PrefabsList : MonoBehaviour
         if (Singleton!=null) Destroy(this);
         Singleton = this;
         prefabs = new Dictionary<string, NetworkObject>() {
-            {"player",playerPrefab}
+            {"player",playerPrefab},
+            {"predictivePlayer",predictivePlayerPrefab},
         };
     }
 

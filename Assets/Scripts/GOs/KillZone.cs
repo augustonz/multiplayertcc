@@ -3,19 +3,24 @@ using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
 
-public class KillZone : NetworkBehaviour
+public class KillZone : MonoBehaviour
 {
-    public override void OnNetworkSpawn()
-    {
-        base.OnNetworkSpawn();
-    }
     
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             PlayerController playerController = other.GetComponent<PlayerController>();
-            playerController.Die();
+            if (playerController != null) {
+                playerController.Die();
+                return;
+            }
+
+            PlayerControllerOffline playerControllerOffline = other.GetComponent<PlayerControllerOffline>();
+            if (playerControllerOffline != null) {
+                playerControllerOffline.Die();
+                return;
+            }
         }
     }
 }

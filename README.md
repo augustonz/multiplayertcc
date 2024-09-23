@@ -1,16 +1,17 @@
 # multiplayertcc
 
 ## Implementation To-Do
-* Test with actual players
-* Add client prediction
-* Add client prediction optionally
+* Make physics work the same on client and server
 * Add client reconciliation
 * Add client reconciliation optionally
 * Add Entity interpolation
 * Add Entity interpolation optionally
 * Add artificial lag
 * Add artificial lag optionally
+* Add all the 8 round maps and test all variable combinations
+* Make animations work even without client prediction. (and on the other players)
 * Test with actual players
+* Make full experiment with actual players
 
 ## My personal To-Do
 * Create the toggle pixel art png

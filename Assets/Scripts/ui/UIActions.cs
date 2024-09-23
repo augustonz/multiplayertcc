@@ -12,8 +12,9 @@ public static class UIActions
         { "leaveMatch",LeaveMatch},
         { "joinMatch",JoinMatch},
         { "endMatch",EndMatch},
-        { "crossLine",CrossLine},
         { "nextRaceReady",ReadyForNextRace},
+        { "joinOffline",JoinOffline},
+        { "leaveOffline",LeaveOffline},
     };
 
     static void EmptyAction() {
@@ -24,9 +25,6 @@ public static class UIActions
         GameController.Singleton.match.FinishRound();
     }
 
-    static void CrossLine() {
-        GameController.Singleton.match.LocalPlayerCrossedLine(MyNetworkManager.Singleton.LocalClientId);
-    }
 
     static void StartServer() {
         GameController.Singleton.MyNetworkManager.StartServer();
@@ -43,6 +41,14 @@ public static class UIActions
 
     static void LeaveMatch() {
         GameController.Singleton.MySceneManager.ChangeSceneRpc("Menu");
+    }
+
+    static void JoinOffline() {
+        GameController.Singleton.MySceneManager.ChangeSceneOffline("PhysiscTest");
+    }
+
+    static void LeaveOffline() {
+        GameController.Singleton.MySceneManager.ChangeSceneOffline("Menu");
     }
 
     static void ReadyForNextRace() {

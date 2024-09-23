@@ -13,6 +13,7 @@ public class OptionsManager: MonoBehaviour {
     [SerializeField] AudioMixerGroup _audioMixerGroup;
 
     bool isFirstTimeChangingValues = true;
+    bool isFirstSecondTimeChangingValues = true;
 
     public void GetInitialSoundValues() {
         _masterVolume = PersistenceManager.GetVolume("master");
@@ -30,6 +31,10 @@ public class OptionsManager: MonoBehaviour {
         _sfxSlider.value = newValue;
         if (isFirstTimeChangingValues) {
             isFirstTimeChangingValues = false;
+            return;
+        }
+        if (isFirstSecondTimeChangingValues) {
+            isFirstSecondTimeChangingValues = false;
             return;
         }
         TestSFXVolume();

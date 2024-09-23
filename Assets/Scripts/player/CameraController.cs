@@ -34,6 +34,9 @@ public class CameraController: MonoBehaviour {
         } 
     }
 
+    public void FollowPlayerOffline() {
+        virtualCamera.Follow =  GameObject.FindGameObjectWithTag("Player").transform;
+    }
     void Update() {
         if (isOnline) return;
         if (virtualCamera.Follow==null) FollowPlayer(0);
