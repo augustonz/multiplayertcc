@@ -90,7 +90,14 @@ namespace Game {
             lastServerState = curr;
 
             if (IsClient && IsLocalPlayer) {
+                // if (!Variables.hasEntityInterpolation &&  receivedInput.moveInput == Vector2.zero && receivedInput.jumpDown == false && receivedInput.jumpHeld==false && receivedInput.dashDown==false) {
+                //     Debug.Log($"Nothing received on tick {tick}");      
+                // } else {
+                // }
+
                 if (!Variables.hasServerReconciliation) {
+                    if (!curr.inputMoved) return;
+
                     transform.position = curr.finalPos;
                     transform.rotation = curr.finalRot;
                     _rb.velocity = curr.finalSpeed;
@@ -102,6 +109,7 @@ namespace Game {
                     }
                 }
             } else if (IsClient && !IsLocalPlayer) {
+                lastServerState = curr;
                 beforeLastServerState = prev;
             }
 
@@ -184,15 +192,13 @@ namespace Game {
 
             RemoveOldInputs();
 
-
             PlayerState currentPlayerState = new() {
                 tick = tickTimer.CurrentTick,
                 finalPos = transform.position,
                 finalRot = transform.rotation,
-                finalSpeed = _rb.velocity
+                finalSpeed = _rb.velocity,
+                inputMoved = !isTrivialInput(currentInput),
             };
-            
-
             
             _playerStates[bufferIndex] = currentPlayerState;
 
@@ -287,19 +293,16 @@ namespace Game {
             
             _playerStates[bufferIndex] = currentPlayerState;
 
-            if (receivedInput.moveInput == Vector2.zero && receivedInput.jumpDown == false && receivedInput.jumpHeld==false && receivedInput.dashDown==false) {
-                //Debug.Log($"Nothing received on tick {tick}");      
+            if (Variables.hasArtificialLag) {
+                StartCoroutine(delayState(Ping.ArtificialWait,currentPlayerState));
             } else {
-                if (Variables.hasArtificialLag) {
-                    StartCoroutine(delaySave(Ping.ArtificialWait,currentPlayerState));
-                } else {
-                    lastServerState = currentServerPlayerState.Value;
-                    currentServerPlayerState.Value = currentPlayerState;
-                }
+                lastServerState = currentServerPlayerState.Value;
+                currentServerPlayerState.Value = currentPlayerState;
             }
+            
         }
 
-        IEnumerator delaySave(double timeToWait,PlayerState newPlayerState) {
+        IEnumerator delayState(double timeToWait,PlayerState newPlayerState) {
             yield return new WaitForSeconds((float)timeToWait);
             lastServerState = currentServerPlayerState.Value;
             currentServerPlayerState.Value = newPlayerState;
@@ -327,6 +330,7 @@ namespace Game {
                 finalRot = transform.rotation,
                 finalSpeed = _rb.velocity,
                 hasDashed = DashWasPressedOnUpdate && IsDashing,
+                inputMoved = !isTrivialInput(input),
             };
 
             RemoveOldInputs();
@@ -356,11 +360,16 @@ namespace Game {
                 finalRot = transform.rotation,
                 finalSpeed = _rb.velocity,
                 hasDashed = DashWasPressedOnUpdate && IsDashing,
+                inputMoved = !isTrivialInput(input),
             };
 
             RemoveOldInputs();
 
             return newPlayerState;
+        }
+
+        bool isTrivialInput(InputState input) {
+            return  input.moveInput == Vector2.zero && input.jumpDown == false && input.jumpHeld==false && input.dashDown==false;
         }
 
         // void HandleServerTick() {
@@ -380,12 +389,12 @@ namespace Game {
         // }
 
         public void SimulateOtherClient() {
-            if (!Variables.hasEntityInterpolation) {
-                transform.position = currentServerPlayerState.Value.finalPos;
-                transform.rotation = currentServerPlayerState.Value.finalRot;
-                _rb.velocity = currentServerPlayerState.Value.finalSpeed;
-                Physics2D.Simulate(Time.fixedDeltaTime);
-            }
+            // if (!Variables.hasEntityInterpolation) {
+            //     transform.position = currentServerPlayerState.Value.finalPos;
+            //     transform.rotation = currentServerPlayerState.Value.finalRot;
+            //     _rb.velocity = currentServerPlayerState.Value.finalSpeed;
+            //     Physics2D.Simulate(Time.fixedDeltaTime);
+            // }
         }
 
         private void FixedUpdate()

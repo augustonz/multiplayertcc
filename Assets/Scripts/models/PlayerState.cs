@@ -9,6 +9,7 @@ public struct PlayerState : INetworkSerializable, System.IEquatable<PlayerState>
     public Quaternion finalRot;
     public Vector3 finalSpeed;
     public bool hasDashed;
+    public bool inputMoved;
     public static PlayerState Empty() {
         PlayerState playerState;
         playerState.tick = 0;
@@ -16,15 +17,17 @@ public struct PlayerState : INetworkSerializable, System.IEquatable<PlayerState>
         playerState.finalRot = new Quaternion();
         playerState.finalSpeed = new Vector3();
         playerState.hasDashed = false;
+        playerState.inputMoved = false;
         return playerState;
     }
 
-    public PlayerState(int tick, Vector3 finalPos, Quaternion finalRot, Vector3 finalSpeed, bool hasDashed) {
+    public PlayerState(int tick, Vector3 finalPos, Quaternion finalRot, Vector3 finalSpeed, bool hasDashed, bool inputMoved) {
         this.tick=tick;
         this.finalPos=finalPos;
         this.finalRot=finalRot;
         this.finalSpeed=finalSpeed;
         this.hasDashed=hasDashed;
+        this.inputMoved=inputMoved;
     }
 
     public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
@@ -37,6 +40,7 @@ public struct PlayerState : INetworkSerializable, System.IEquatable<PlayerState>
             reader.ReadValueSafe(out finalRot);
             reader.ReadValueSafe(out finalSpeed);
             reader.ReadValueSafe(out hasDashed);
+            reader.ReadValueSafe(out inputMoved);
         }
         else
         {
@@ -46,12 +50,13 @@ public struct PlayerState : INetworkSerializable, System.IEquatable<PlayerState>
             writer.WriteValueSafe(finalRot);
             writer.WriteValueSafe(finalSpeed);
             writer.WriteValueSafe(hasDashed);
+            writer.WriteValueSafe(inputMoved);
         }
     }
 
     public bool Equals(PlayerState other)
     {
-        return finalPos == other.finalPos && finalRot == other.finalRot && finalSpeed == other.finalSpeed;
+        return finalPos == other.finalPos && finalRot == other.finalRot && finalSpeed == other.finalSpeed && inputMoved == other.inputMoved;
     }
 
     public override string ToString()
