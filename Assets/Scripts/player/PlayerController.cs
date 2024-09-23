@@ -188,6 +188,7 @@ namespace Game {
             //Move the player locally
             if (Variables.hasClientSidePrediction) {
                 Move();
+                Physics2D.Simulate(Time.fixedDeltaTime);
             }
 
             RemoveOldInputs();
@@ -264,7 +265,6 @@ namespace Game {
             HandleGravity();
             
             ApplyMovement();
-            Physics2D.Simulate(Time.fixedDeltaTime);
         }
 
         void RemoveOldInputs() {
@@ -290,6 +290,7 @@ namespace Game {
             _inputStates[bufferIndex] = receivedInput;
             
             PlayerState currentPlayerState = ProcessNewStateFromInput(receivedInput);
+            if(OwnerClientId==1) Physics2D.Simulate(Time.fixedDeltaTime);
             
             _playerStates[bufferIndex] = currentPlayerState;
 
@@ -353,6 +354,7 @@ namespace Game {
             _frameInput.DashDown = input.dashDown;
 
             Move();
+            Physics2D.Simulate(Time.fixedDeltaTime);
 
             PlayerState newPlayerState = new() {
                 tick = input.tick,
