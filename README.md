@@ -1,8 +1,6 @@
 # multiplayertcc
 
 ## Implementation To-Do
-* Add Entity interpolation
-* Add Entity interpolation optionally
 * Make animations work even without client prediction. (and on the other players)
 * Test locally on dedicated server
 * Test with actual players
