@@ -190,15 +190,16 @@ public class Match : NetworkBehaviour
         ulong currentRound = matchData.Value.currentMatchRound;
         ulong leftover = currentRound%4;
 
-        // Variables.hasClientSidePrediction = leftover != 3;
-        // Variables.hasServerReconciliation = leftover == 2 || leftover == 0;
-        // Variables.hasEntityInterpolation = leftover == 3 || leftover == 0;
-        // Variables.hasArtificialLag = currentRound>4;
-
-        Variables.hasClientSidePrediction = true;
-        Variables.hasServerReconciliation = true;
+        Variables.hasClientSidePrediction = leftover != 3;
+        Variables.hasServerReconciliation = leftover == 2 || leftover == 0;
         Variables.hasEntityInterpolation = false;
-        Variables.hasArtificialLag = false;
+       // Variables.hasEntityInterpolation = leftover == 3 || leftover == 0;
+        Variables.hasArtificialLag = currentRound>4;
+
+        // Variables.hasClientSidePrediction = true;
+        // Variables.hasServerReconciliation = false;
+        // Variables.hasArtificialLag = leftover == 2;
+        // Variables.hasEntityInterpolation = false;
 
         Debug.Log($"client side rendering: {Variables.hasClientSidePrediction}, servefr reconciliation {Variables.hasServerReconciliation}, entity interpolation {Variables.hasEntityInterpolation}, artificial Lag {Variables.hasArtificialLag}");
         SetLatencyCompensationVariablesRpc(Variables.hasClientSidePrediction,Variables.hasServerReconciliation,Variables.hasEntityInterpolation,Variables.hasArtificialLag);

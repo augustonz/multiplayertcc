@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PhysiscTest.unity
     guid: a6e9ca283f46a6542bc1c34994ad7bd7
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 1f66b24a3e77d464a966d4c31ac4c37c
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: e734a42c0eeaa4596a1e2bafaab6e922
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 679c59554eb464c66bcc066c523e89fa
+  - enabled: 1
+    path: Assets/Scenes/Level5.unity
+    guid: 2bdcf3e7d99be448ab03c76b12abaa62
   m_configObjects: {}

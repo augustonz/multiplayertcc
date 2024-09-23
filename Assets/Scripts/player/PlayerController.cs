@@ -22,9 +22,12 @@ namespace Game {
         private bool _cachedQueryStartInColliders;
         [SerializeField] private GameObject _reconciliationGhostClient;
         [SerializeField] private GameObject _reconciliationGhostServer;
-        
+        [SerializeField] private bool _seeReconciliationGhosts;
+        [SerializeField] private float serverTimeStep = 0.1f;
+
         private NetworkTimer tickTimer;
         private float tickRate = 50f;
+
 
         private const int buffer = 1024;
         [SerializeField] private float maxPosError;
@@ -33,8 +36,9 @@ namespace Game {
         private PlayerState[] _playerStates = new PlayerState[buffer];
         private Queue<InputState> _serverInputQueue = new ();
         public NetworkVariable<PlayerState> currentServerPlayerState = new NetworkVariable<PlayerState>();
-        public PlayerState lastServerState;
-        public PlayerState lastProcessedState;
+        private PlayerState lastServerState;
+        private PlayerState beforeLastServerState;
+        private PlayerState lastProcessedState;
 
         #region Interface
 
@@ -58,6 +62,8 @@ namespace Game {
                 GameController.Singleton.match.SpawnedLocalPlayer(this);
                 FindFirstObjectByType<CameraController>().FollowPlayer(OwnerClientId);
                 currentServerPlayerState.OnValueChanged += OnServerStateChange;
+            } else if (IsClient && !IsOwner) {
+                currentServerPlayerState.OnValueChanged += OnServerStateChange;
             }
         }
 
@@ -74,6 +80,10 @@ namespace Game {
 
             _cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
             tickTimer = new NetworkTimer(tickRate);
+            Physics2D.simulationMode = SimulationMode2D.Script;
+
+            _reconciliationGhostClient.SetActive(_seeReconciliationGhosts);
+            _reconciliationGhostServer.SetActive(_seeReconciliationGhosts);
         }
 
         void OnServerStateChange(PlayerState prev,PlayerState curr) {
@@ -91,6 +101,8 @@ namespace Game {
                         dashTimer = 0;
                     }
                 }
+            } else if (IsClient && !IsLocalPlayer) {
+                beforeLastServerState = prev;
             }
 
         }
@@ -99,6 +111,13 @@ namespace Game {
             UpdateTimers();
 
             GatherInput();
+
+            if (Variables.hasEntityInterpolation) {
+                if (IsClient && !IsOwner) {
+                    float interpolValue = _time % serverTimeStep/serverTimeStep;
+                    transform.position = Vector3.Lerp(beforeLastServerState.finalPos,lastServerState.finalPos,interpolValue);
+                }
+            }
         }
 
         void UpdateTimers() {
@@ -196,7 +215,6 @@ namespace Game {
             _reconciliationGhostClient.transform.position = _playerStates[bufferIndex].finalPos;
             _reconciliationGhostServer.transform.position = rewindState.finalPos;
 
-            Debug.Log($"Tick: {lastServerState.tick}, PositionError: {positionError}");
             if (positionError > maxPosError) {
                 ReconcileState(rewindState);
             }
@@ -218,7 +236,7 @@ namespace Game {
             int bufferIndex = rewindState.tick % 1024;
             _playerStates[bufferIndex] = rewindState;
 
-            int tickToReplay = lastServerState.tick;
+            int tickToReplay = rewindState.tick;
             while(tickToReplay < tickTimer.CurrentTick) {
                 bufferIndex = tickToReplay % 1024;
                 PlayerState newPlayerState = SimulateNewStateFromInput(_inputStates[bufferIndex]);
@@ -240,6 +258,7 @@ namespace Game {
             HandleGravity();
             
             ApplyMovement();
+            Physics2D.Simulate(Time.fixedDeltaTime);
         }
 
         void RemoveOldInputs() {
@@ -268,12 +287,22 @@ namespace Game {
             
             _playerStates[bufferIndex] = currentPlayerState;
 
-            if (!Variables.hasEntityInterpolation && receivedInput.moveInput == Vector2.zero && receivedInput.jumpDown == false && receivedInput.jumpHeld==false && receivedInput.dashDown==false) {
+            if (receivedInput.moveInput == Vector2.zero && receivedInput.jumpDown == false && receivedInput.jumpHeld==false && receivedInput.dashDown==false) {
                 //Debug.Log($"Nothing received on tick {tick}");      
             } else {
-                lastServerState = currentServerPlayerState.Value;
-                currentServerPlayerState.Value = currentPlayerState;
+                if (Variables.hasArtificialLag) {
+                    StartCoroutine(delaySave(Ping.ArtificialWait,currentPlayerState));
+                } else {
+                    lastServerState = currentServerPlayerState.Value;
+                    currentServerPlayerState.Value = currentPlayerState;
+                }
             }
+        }
+
+        IEnumerator delaySave(double timeToWait,PlayerState newPlayerState) {
+            yield return new WaitForSeconds((float)timeToWait);
+            lastServerState = currentServerPlayerState.Value;
+            currentServerPlayerState.Value = newPlayerState;
         }
 
         PlayerState ProcessNewStateFromInput(InputState input) {
@@ -319,10 +348,7 @@ namespace Game {
             _frameInput.JumpHeld = input.jumpHeld;
             _frameInput.DashDown = input.dashDown;
 
-            Physics.simulationMode = SimulationMode.Script;
             Move();
-            Physics.Simulate(Time.fixedDeltaTime);
-            Physics.simulationMode = SimulationMode.FixedUpdate;
 
             PlayerState newPlayerState = new() {
                 tick = input.tick,
@@ -337,25 +363,29 @@ namespace Game {
             return newPlayerState;
         }
 
-        void HandleServerTick() {
-            int bufferIndex = -1;
-            InputState inputPayload = default;
-            while (_serverInputQueue.Count > 0) {
-                inputPayload = _serverInputQueue.Dequeue();
+        // void HandleServerTick() {
+        //     int bufferIndex = -1;
+        //     InputState inputPayload = default;
+        //     while (_serverInputQueue.Count > 0) {
+        //         inputPayload = _serverInputQueue.Dequeue();
                 
-                bufferIndex = inputPayload.tick % buffer;
+        //         bufferIndex = inputPayload.tick % buffer;
                 
-                PlayerState statePayload = SimulateNewStateFromInput(inputPayload);
-                _playerStates[bufferIndex] = statePayload;
-            }
+        //         PlayerState statePayload = SimulateNewStateFromInput(inputPayload);
+        //         _playerStates[bufferIndex] = statePayload;
+        //     }
             
-            if (bufferIndex == -1) return;
-            currentServerPlayerState.Value = _playerStates[bufferIndex];
-        }
+        //     if (bufferIndex == -1) return;
+        //     currentServerPlayerState.Value = _playerStates[bufferIndex];
+        // }
 
         public void SimulateOtherClient() {
-            transform.position = currentServerPlayerState.Value.finalPos;
-            transform.rotation = currentServerPlayerState.Value.finalRot;
+            if (!Variables.hasEntityInterpolation) {
+                transform.position = currentServerPlayerState.Value.finalPos;
+                transform.rotation = currentServerPlayerState.Value.finalRot;
+                _rb.velocity = currentServerPlayerState.Value.finalSpeed;
+                Physics2D.Simulate(Time.fixedDeltaTime);
+            }
         }
 
         private void FixedUpdate()
@@ -365,7 +395,7 @@ namespace Game {
             while(tickTimer.ShouldTick()) {
                 if (IsServer) {
                     if (Variables.hasEntityInterpolation) {
-                        HandleServerTick();
+                        // HandleServerTick();
                     }
                 }
                 else if (IsClient && IsLocalPlayer) {

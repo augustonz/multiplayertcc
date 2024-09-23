@@ -4177,7 +4177,7 @@ MonoBehaviour:
     Port: 7777
     ServerListenAddress: 0.0.0.0
   DebugSimulator:
-    PacketDelayMS: 50
+    PacketDelayMS: 0
     PacketJitterMS: 0
     PacketDropRate: 0
 --- !u!4 &1454765668
@@ -5116,10 +5116,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.048437502
-    y: 0.34074074
-    width: 0.16666667
-    height: 0.16666666
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
