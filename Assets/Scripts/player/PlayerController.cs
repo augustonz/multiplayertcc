@@ -117,6 +117,7 @@ namespace Game {
                     if (currentServerPlayerState.Value.hasDashed) {
                         dashTimer = 0;
                     }
+                    TriggerAnimations(currentServerPlayerState.Value);
                 }
             } else if (IsClient && !IsLocalPlayer) {
                 lastServerState = curr;
@@ -434,9 +435,19 @@ namespace Game {
             _grounded = state.isGrounded;
             _currentAirJumps = state.airJumps;
 
-            Jumped.Invoke(_currentAirJumps,state.isWallJump);
-            HitWallChanged.Invoke(state.isEnteringWall);
-            GroundedChanged.Invoke(_grounded,0);
+            if (state.shouldTriggerJumped) Jumped.Invoke(_currentAirJumps,state.isWallJump);
+            if (state.shouldTriggerHitWall) HitWallChanged.Invoke(state.isEnteringWall);
+            if (state.shouldTriggerGroundChange) GroundedChanged.Invoke(_grounded,0);
+
+            if (state.isSliding) {
+                if (state.lastInputDirection.x<0) {
+                    TurnRight();
+                } else if (state.lastInputDirection.x>0) {
+                    TurnLeft();
+                }
+            } else if (state.finalSpeed.x > 0 && !isFacingRight) TurnRight();
+            else if (state.finalSpeed.x < 0 && isFacingRight) TurnLeft();
+        
         }
 
         private void FixedUpdate()
