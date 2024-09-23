@@ -96,7 +96,7 @@ namespace Game {
                 // }
 
                 if (!Variables.hasServerReconciliation) {
-                    if (!curr.inputMoved) return;
+                    if (Variables.hasClientSidePrediction && !curr.inputMoved) return;
 
                     transform.position = curr.finalPos;
                     transform.rotation = curr.finalRot;
@@ -181,11 +181,9 @@ namespace Game {
                 dashDown = DashWasPressedOnUpdate
             };
 
-            //Send input to vove the player on the server
             _inputStates[bufferIndex] = currentInput;
             MoveOnServerRpc(currentInput);
 
-            //Move the player locally
             if (Variables.hasClientSidePrediction) {
                 Move();
                 Physics2D.Simulate(Time.fixedDeltaTime);
@@ -391,12 +389,12 @@ namespace Game {
         // }
 
         public void SimulateOtherClient() {
-            // if (!Variables.hasEntityInterpolation) {
-            //     transform.position = currentServerPlayerState.Value.finalPos;
-            //     transform.rotation = currentServerPlayerState.Value.finalRot;
-            //     _rb.velocity = currentServerPlayerState.Value.finalSpeed;
-            //     Physics2D.Simulate(Time.fixedDeltaTime);
-            // }
+            if (!Variables.hasEntityInterpolation) {
+                transform.position = currentServerPlayerState.Value.finalPos;
+                transform.rotation = currentServerPlayerState.Value.finalRot;
+                _rb.velocity = currentServerPlayerState.Value.finalSpeed;
+                if (!Variables.hasClientSidePrediction) Physics2D.Simulate(Time.fixedDeltaTime);
+            }
         }
 
         private void FixedUpdate()
