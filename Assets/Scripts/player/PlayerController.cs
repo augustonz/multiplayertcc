@@ -24,11 +24,11 @@ namespace Game {
         [SerializeField] private GameObject _reconciliationGhostServer;
         [SerializeField] private bool _seeReconciliationGhosts;
         [SerializeField] private float serverTimeStep = 0.1f;
-
+        float interpolationTimer;
+        Vector3 interpolationPosTarget;
+        Vector3 interpolationPosOrigin;
         private NetworkTimer tickTimer;
         private float tickRate = 50f;
-
-
         private const int buffer = 1024;
         [SerializeField] private float maxPosError;
 
@@ -65,6 +65,8 @@ namespace Game {
             } else if (IsClient && !IsOwner) {
                 currentServerPlayerState.OnValueChanged += OnServerStateChange;
             }
+            interpolationPosTarget = transform.position;
+            interpolationPosOrigin = transform.position;
         }
 
         private void Awake()
@@ -122,8 +124,13 @@ namespace Game {
 
             if (Variables.hasEntityInterpolation) {
                 if (IsClient && !IsOwner) {
-                    float interpolValue = _time % serverTimeStep/serverTimeStep;
-                    transform.position = Vector3.Lerp(beforeLastServerState.finalPos,lastServerState.finalPos,interpolValue);
+                    float interpolValue = interpolationTimer/serverTimeStep;
+                    transform.position = Vector3.Lerp(interpolationPosOrigin,interpolationPosTarget,interpolValue);
+                    if (interpolationTimer>serverTimeStep) {
+                        interpolationPosTarget = lastServerState.finalPos;
+                        interpolationPosOrigin = transform.position;
+                        interpolationTimer-=serverTimeStep;
+                    }
                 }
             }
         }
@@ -131,6 +138,7 @@ namespace Game {
         void UpdateTimers() {
             dashTimer +=Time.deltaTime;
             _time += Time.deltaTime;
+            interpolationTimer += Time.deltaTime;
         }
 
         public void EnablePlayerInput(bool isEnabled) {
