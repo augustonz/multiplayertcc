@@ -422,10 +422,10 @@ namespace Game {
                 transform.rotation = currentServerPlayerState.Value.finalRot;
                 _rb.velocity = currentServerPlayerState.Value.finalSpeed;
                 
-                TriggerAnimations(currentServerPlayerState.Value);
 
                 if (!Variables.hasClientSidePrediction) Physics2D.Simulate(Time.fixedDeltaTime);
             }
+            TriggerAnimations(currentServerPlayerState.Value);
         }
 
         void TriggerAnimations(PlayerState state) {
