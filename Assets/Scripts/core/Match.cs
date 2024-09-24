@@ -190,10 +190,13 @@ public class Match : NetworkBehaviour
         ulong currentRound = matchData.Value.currentMatchRound;
         ulong leftover = currentRound%4;
 
-        Variables.hasClientSidePrediction = leftover == 2 || leftover == 3;
-        Variables.hasServerReconciliation = leftover == 3;
+        Variables.hasClientSidePrediction = leftover == 1 || leftover == 2;
+        // Variables.hasClientSidePrediction = leftover == 2 || leftover == 3;
+        Variables.hasServerReconciliation = leftover == 1 || leftover == 2;
+        // Variables.hasServerReconciliation = leftover == 3;
         Variables.hasEntityInterpolation = leftover == 0;
-        Variables.hasArtificialLag = currentRound>4;
+        Variables.hasArtificialLag = true;
+        // Variables.hasArtificialLag = currentRound>4;
 
 
         Debug.Log($"client side rendering: {Variables.hasClientSidePrediction}, servefr reconciliation {Variables.hasServerReconciliation}, entity interpolation {Variables.hasEntityInterpolation}, artificial Lag {Variables.hasArtificialLag}");
@@ -213,7 +216,7 @@ public class Match : NetworkBehaviour
         if (!hasRaceStarted) return;
         currentRoundTimer+=Time.deltaTime;
 
-        if (hasWinner && !hasEnded && currentRoundTimer>forceEndRoundTimer) ForceEndRound();
+        //if (hasWinner && !hasEnded && currentRoundTimer>forceEndRoundTimer) ForceEndRound();
 
         if (hasEnded) CheckAllPlayersReady();
     }

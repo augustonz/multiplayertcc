@@ -37,12 +37,12 @@ public class OptionsManager: MonoBehaviour {
             });
         });
 
-        _resolutionDropdown.value = PlayerPrefs.GetInt("resolution",0);
+        _resolutionDropdown.value = PlayerPrefs.GetInt("resolution",5);
     }
 
     public void GetInitialVideoValues() {
         Screen.fullScreen = PlayerPrefs.GetInt("isFullscreen",1) == 1 ;
-        ScreenResolution resolution  = _resolutions[PlayerPrefs.GetInt("resolution",0)];
+        ScreenResolution resolution  = _resolutions[PlayerPrefs.GetInt("resolution",5)];
         Screen.SetResolution(resolution.Width,resolution.Height,Screen.fullScreenMode);
     }
 
