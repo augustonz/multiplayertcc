@@ -287,25 +287,12 @@ namespace Game {
             DashWasPressedOnUpdate = false;
         }
 
-        int lastReceivedTick;
 
         [Rpc(SendTo.Server)]
         private void MoveOnServerRpc(InputState receivedInput) {
-            // if (Variables.hasEntityInterpolation) {
-            //     _serverInputQueue.Enqueue(receivedInput);
-            //     return;
-            // }
-
-            if (lastReceivedTick + 1 != receivedInput.tick) {
-                Debug.LogError("Tick Received out of order");
-            }
-            lastReceivedTick = receivedInput.tick;
 
             int bufferIndex = receivedInput.tick % buffer;
-            _inputStates[bufferIndex] = receivedInput;
-            
             PlayerState currentPlayerState = ProcessNewStateFromInput(receivedInput);
-            if(OwnerClientId==1) Physics2D.Simulate(Time.fixedDeltaTime);
             
             _playerStates[bufferIndex] = currentPlayerState;
 
@@ -339,6 +326,7 @@ namespace Game {
             _frameInput.DashDown = input.dashDown;
 
             Move();
+            if(OwnerClientId==1) Physics2D.Simulate(Time.fixedDeltaTime);
 
             PlayerState newPlayerState = new() {
                 tick = input.tick,
