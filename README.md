@@ -13,8 +13,6 @@
 
 
 ## Player Feedback To-Do
-* Weird things with big buttons depending on resolution
-* Study errors in reconciliation
 * Add instructions maybe
 
 
