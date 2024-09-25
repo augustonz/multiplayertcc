@@ -1,6 +1,8 @@
 # multiplayertcc
 
 ## Implementation To-Do
+* Add a GiveUp button on the match
+* Fix bug not being able to connect after playing offline
 
 ## My personal To-Do
 * Create the toggle pixel art png
