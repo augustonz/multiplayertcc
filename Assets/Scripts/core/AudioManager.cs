@@ -7,14 +7,17 @@ public class AudioManager : NetworkBehaviour
 {
     public static AudioManager instance;
     [SerializeField] SerializableDict<string,AudioSource> _nameToAudioSerializable;
+    [SerializeField] OptionsManager optionsManager;
     Dictionary<string,AudioSource> _nameToAudio;
     public void Awake() {
         if (instance!=null) {
-            Destroy(gameObject);
+            Destroy(instance.gameObject);
         }
         instance = this;
         DontDestroyOnLoad(this);
         _nameToAudio = _nameToAudioSerializable.ToDictionary();
+        optionsManager.GetInitialSoundValues();
+
     }
 
     public void PlaySFX(string audioName) {

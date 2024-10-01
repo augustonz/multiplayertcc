@@ -212,7 +212,59 @@ MonoBehaviour:
   _greenPingMat: {fileID: 2100000, guid: 5a8cca62a11184fbf8864257306b09ad, type: 2}
   greenCutoff: 75
   yellowCutoff: 200
-  pingDelay: 2
+  pingDelay: 1
+  highPingGoal: 0.25
+  pingInstances:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!1 &9136889122605977790
 GameObject:
   m_ObjectHideFlags: 0

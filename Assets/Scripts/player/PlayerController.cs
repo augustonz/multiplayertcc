@@ -20,6 +20,25 @@ namespace Game {
         private Vector2 _frameVelocity;
         public bool _limitSpeedToMax = true;
         private bool _cachedQueryStartInColliders;
+        [SerializeField] private GameObject _reconciliationGhostClient;
+        [SerializeField] private GameObject _reconciliationGhostServer;
+        [SerializeField] private bool _seeReconciliationGhosts;
+        [SerializeField] private float serverTimeStep = 0.1f;
+        float interpolationTimer;
+        Vector3 interpolationPosTarget;
+        Vector3 interpolationPosOrigin;
+        private NetworkTimer tickTimer;
+        private float tickRate = 50f;
+        private const int buffer = 1024;
+        [SerializeField] private float maxPosError;
+
+        public InputState[] _inputStates = new InputState[buffer];
+        private PlayerState[] _playerStates = new PlayerState[buffer];
+        private Queue<InputState> _serverInputQueue = new ();
+        public NetworkVariable<PlayerState> currentServerPlayerState = new NetworkVariable<PlayerState>();
+        private PlayerState lastServerState;
+        private PlayerState beforeLastServerState;
+        private PlayerState lastProcessedState;
 
         #region Interface
 
@@ -27,6 +46,14 @@ namespace Game {
         public event Action<bool, float> GroundedChanged;
         public event Action<bool> HitWallChanged;
         public event Action<int, bool> Jumped;
+        bool ShouldGroundChanged;
+
+        bool ShouldHitWallChanged;
+        bool HitWallChangedIsEnterWall;
+
+        bool ShouldJumped;
+        bool JumpedIsWallJump;
+
         public event Action<float> GotPowerUp;
         public event Action Dashed;
         public bool IsSliding => _isSliding;
@@ -42,9 +69,13 @@ namespace Game {
             if (IsOwner && !IsServer) {
                 GameController.Singleton.match.SpawnedLocalPlayer(this);
                 FindFirstObjectByType<CameraController>().FollowPlayer(OwnerClientId);
+                currentServerPlayerState.OnValueChanged += OnServerStateChange;
+            } else if (IsClient && !IsOwner) {
+                currentServerPlayerState.OnValueChanged += OnServerStateChange;
             }
-
-        } 
+            interpolationPosTarget = transform.position;
+            interpolationPosOrigin = transform.position;
+        }
 
         private void Awake()
         {
@@ -56,21 +87,67 @@ namespace Game {
             
             Floorfilter.SetLayerMask(_stats.FloorLayer);
             Wallfilter.SetLayerMask(_stats.FloorLayer);
-            // Wallfilter.SetLayerMask(_stats.WallLayer);
 
             _cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
+            tickTimer = new NetworkTimer(tickRate);
+            Physics2D.simulationMode = SimulationMode2D.Script;
+
+            _reconciliationGhostClient.SetActive(_seeReconciliationGhosts);
+            _reconciliationGhostServer.SetActive(_seeReconciliationGhosts);
         }
 
+        void OnServerStateChange(PlayerState prev,PlayerState curr) {
+            lastServerState = curr;
+
+            if (IsClient && IsLocalPlayer) {
+                // if (!Variables.hasEntityInterpolation &&  receivedInput.moveInput == Vector2.zero && receivedInput.jumpDown == false && receivedInput.jumpHeld==false && receivedInput.dashDown==false) {
+                //     Debug.Log($"Nothing received on tick {tick}");      
+                // } else {
+                // }
+
+                if (!Variables.hasServerReconciliation) {
+                    if (Variables.hasClientSidePrediction && !curr.inputMoved) return;
+
+                    transform.position = curr.finalPos;
+                    transform.rotation = curr.finalRot;
+                    _rb.velocity = curr.finalSpeed;
+                }
+
+                if (!Variables.hasClientSidePrediction) {
+                    if (currentServerPlayerState.Value.hasDashed) {
+                        dashTimer = 0;
+                    }
+                    TriggerAnimations(currentServerPlayerState.Value);
+                }
+            } else if (IsClient && !IsLocalPlayer) {
+                lastServerState = curr;
+                beforeLastServerState = prev;
+            }
+
+        }
         private void Update()
         {
             UpdateTimers();
 
             GatherInput();
+
+            if (Variables.hasEntityInterpolation) {
+                if (IsClient && !IsOwner) {
+                    float interpolValue = interpolationTimer/serverTimeStep;
+                    transform.position = Vector3.Lerp(interpolationPosOrigin,interpolationPosTarget,interpolValue);
+                    if (interpolationTimer>serverTimeStep) {
+                        interpolationPosTarget = lastServerState.finalPos;
+                        interpolationPosOrigin = transform.position;
+                        interpolationTimer-=serverTimeStep;
+                    }
+                }
+            }
         }
 
         void UpdateTimers() {
             dashTimer +=Time.deltaTime;
             _time += Time.deltaTime;
+            interpolationTimer += Time.deltaTime;
         }
 
         public void EnablePlayerInput(bool isEnabled) {
@@ -91,7 +168,7 @@ namespace Game {
                 JumpDown = iaa["Player/Jump"].WasPerformedThisFrame(),
                 JumpHeld = iaa["Player/Jump"].ReadValue<float>()!=0,
                 Move = new Vector2(iaa["Player/Walk"].ReadValue<float>(),0),
-                Dash = iaa["Player/Dash"].WasPerformedThisFrame()
+                DashDown = iaa["Player/Dash"].WasPerformedThisFrame()
             };
 
             if (_stats.SnapInput)
@@ -106,16 +183,95 @@ namespace Game {
                 _timeJumpWasPressed = _time;
             }
 
-            if (_frameInput.Dash) DashWasPressedOnUpdate = true;
+            if (_frameInput.DashDown) DashWasPressedOnUpdate = true;
         }
 
-        private void FixedUpdate()
-        {
+        public void HandleLocalClientTick() {
+
+            int bufferIndex = tickTimer.CurrentTick % buffer;
+
+            InputState currentInput = new() {
+                tick = tickTimer.CurrentTick,
+                moveInput = _frameInput.Move,
+                jumpDown = _jumpToConsume,
+                jumpHeld = _frameInput.JumpHeld,
+                dashDown = DashWasPressedOnUpdate
+            };
+
+            _inputStates[bufferIndex] = currentInput;
+            MoveOnServerRpc(currentInput);
+
+            if (Variables.hasClientSidePrediction) {
+                Move();
+                Physics2D.Simulate(Time.fixedDeltaTime);
+            }
+
+            RemoveOldInputs();
+
+            PlayerState currentPlayerState = new() {
+                tick = tickTimer.CurrentTick,
+                finalPos = transform.position,
+                finalRot = transform.rotation,
+                finalSpeed = _rb.velocity,
+                inputMoved = !isTrivialInput(currentInput),
+            };
+            
+            _playerStates[bufferIndex] = currentPlayerState;
+
+            if (Variables.hasServerReconciliation) {
+
+                HandleServerReconciliation();
+            }
+        }
+
+        void HandleServerReconciliation() {
+            if (!ShouldReconcile()) return;
+
+            int bufferIndex = lastServerState.tick % buffer;
+            PlayerState rewindState =  lastServerState;
+
+            if (bufferIndex-1 < 0) return;
+            
+            float positionError = Vector3.Distance(rewindState.finalPos,_playerStates[bufferIndex].finalPos);
+
+            _reconciliationGhostClient.transform.position = _playerStates[bufferIndex].finalPos;
+            _reconciliationGhostServer.transform.position = rewindState.finalPos;
+
+            if (positionError > maxPosError) {
+                ReconcileState(rewindState);
+            }
+
+            lastProcessedState = lastServerState;
+        }
+
+        bool ShouldReconcile() {
+            bool isNewServerState = !lastServerState.Equals(default);
+            bool isLastStateUndefinedOrDifferent = lastProcessedState.Equals(default) || !lastProcessedState.Equals(lastServerState);
+            return isLastStateUndefinedOrDifferent && isNewServerState;
+        }
+
+        void ReconcileState(PlayerState rewindState) {
+            transform.position = rewindState.finalPos;
+            transform.rotation = rewindState.finalRot;
+            _rb.velocity = rewindState.finalSpeed;
+
+            int bufferIndex = rewindState.tick % 1024;
+            _playerStates[bufferIndex] = rewindState;
+
+            int tickToReplay = rewindState.tick;
+            while(tickToReplay < tickTimer.CurrentTick) {
+                bufferIndex = tickToReplay % 1024;
+                PlayerState newPlayerState = SimulateNewStateFromInput(_inputStates[bufferIndex]);
+                _playerStates[bufferIndex] = newPlayerState;
+                tickToReplay++;
+            }
+        }
+
+        private void Move() {
             CheckCollisions();
 
             HandleWallJump();
             HandleJump();
-            _jumpToConsume = false;
 
             HandleSlide();
             HandleDash();
@@ -126,6 +282,179 @@ namespace Game {
             ApplyMovement();
         }
 
+        void RemoveOldInputs() {
+            _jumpToConsume = false;
+            DashWasPressedOnUpdate = false;
+        }
+
+
+        [Rpc(SendTo.Server)]
+        private void MoveOnServerRpc(InputState receivedInput) {
+
+            int bufferIndex = receivedInput.tick % buffer;
+            PlayerState currentPlayerState = ProcessNewStateFromInput(receivedInput);
+            
+            _playerStates[bufferIndex] = currentPlayerState;
+
+            if (Variables.hasArtificialLag) {
+                StartCoroutine(delayState(Ping.ArtificialWait,currentPlayerState));
+            } else {
+                lastServerState = currentServerPlayerState.Value;
+                currentServerPlayerState.Value = currentPlayerState;
+            }
+            
+        }
+
+        IEnumerator delayState(double timeToWait,PlayerState newPlayerState) {
+            yield return new WaitForSeconds((float)timeToWait);
+            lastServerState = currentServerPlayerState.Value;
+            currentServerPlayerState.Value = newPlayerState;
+        }
+
+        PlayerState ProcessNewStateFromInput(InputState input) {
+            if (input.jumpDown)
+            {
+                _jumpToConsume = true;
+                _timeJumpWasPressed = _time;
+            }
+
+            if (input.dashDown) DashWasPressedOnUpdate = true;
+
+            _frameInput.Move = input.moveInput;
+            _frameInput.JumpDown = input.jumpDown;
+            _frameInput.JumpHeld = input.jumpHeld;
+            _frameInput.DashDown = input.dashDown;
+
+            Move();
+            if(OwnerClientId==1) Physics2D.Simulate(Time.fixedDeltaTime);
+
+            PlayerState newPlayerState = new() {
+                tick = input.tick,
+                finalPos = transform.position,
+                finalRot = transform.rotation,
+                finalSpeed = _rb.velocity,
+                hasDashed = DashWasPressedOnUpdate && IsDashing,
+                inputMoved = !isTrivialInput(input),
+
+                lastInputDirection = input.moveInput,
+                isSliding = _isSliding,
+                isGrounded = _grounded,
+                airJumps = _currentAirJumps,
+
+                shouldTriggerGroundChange = ShouldGroundChanged,
+                shouldTriggerHitWall = ShouldHitWallChanged,
+                isEnteringWall = HitWallChangedIsEnterWall,
+                shouldTriggerJumped = ShouldJumped,
+                isWallJump = JumpedIsWallJump
+            };
+
+            RemoveOldInputs();
+
+            return newPlayerState;
+        }
+
+        PlayerState SimulateNewStateFromInput(InputState input) {
+            if (input.jumpDown)
+            {
+                _jumpToConsume = true;
+                _timeJumpWasPressed = _time;
+            }
+
+            if (input.dashDown) DashWasPressedOnUpdate = true;
+
+            _frameInput.Move = input.moveInput;
+            _frameInput.JumpDown = input.jumpDown;
+            _frameInput.JumpHeld = input.jumpHeld;
+            _frameInput.DashDown = input.dashDown;
+
+            Move();
+            Physics2D.Simulate(Time.fixedDeltaTime);
+
+            PlayerState newPlayerState = new() {
+                tick = input.tick,
+                finalPos = transform.position,
+                finalRot = transform.rotation,
+                finalSpeed = _rb.velocity,
+                hasDashed = DashWasPressedOnUpdate && IsDashing,
+                inputMoved = !isTrivialInput(input),
+            };
+
+            RemoveOldInputs();
+
+            return newPlayerState;
+        }
+
+        bool isTrivialInput(InputState input) {
+            return  input.moveInput == Vector2.zero && input.jumpDown == false && input.jumpHeld==false && input.dashDown==false;
+        }
+
+        // void HandleServerTick() {
+        //     int bufferIndex = -1;
+        //     InputState inputPayload = default;
+        //     while (_serverInputQueue.Count > 0) {
+        //         inputPayload = _serverInputQueue.Dequeue();
+                
+        //         bufferIndex = inputPayload.tick % buffer;
+                
+        //         PlayerState statePayload = SimulateNewStateFromInput(inputPayload);
+        //         _playerStates[bufferIndex] = statePayload;
+        //     }
+            
+        //     if (bufferIndex == -1) return;
+        //     currentServerPlayerState.Value = _playerStates[bufferIndex];
+        // }
+
+        public void SimulateOtherClient() {
+            if (!Variables.hasEntityInterpolation) {
+                transform.position = currentServerPlayerState.Value.finalPos;
+                transform.rotation = currentServerPlayerState.Value.finalRot;
+                _rb.velocity = currentServerPlayerState.Value.finalSpeed;
+                
+
+                if (!Variables.hasClientSidePrediction) Physics2D.Simulate(Time.fixedDeltaTime);
+            }
+            TriggerAnimations(currentServerPlayerState.Value);
+        }
+
+        void TriggerAnimations(PlayerState state) {
+            if (state.hasDashed) Dashed.Invoke();
+            _frameInput.Move = state.lastInputDirection;
+            _isSliding = state.isSliding;
+            _grounded = state.isGrounded;
+            _currentAirJumps = state.airJumps;
+
+            if (state.shouldTriggerJumped) Jumped.Invoke(_currentAirJumps,state.isWallJump);
+            if (state.shouldTriggerHitWall) HitWallChanged.Invoke(state.isEnteringWall);
+            if (state.shouldTriggerGroundChange) GroundedChanged.Invoke(_grounded,0);
+
+            if (state.isSliding) {
+                if (state.lastInputDirection.x<0) {
+                    TurnRight();
+                } else if (state.lastInputDirection.x>0) {
+                    TurnLeft();
+                }
+            } else if (state.finalSpeed.x > 0 && !isFacingRight) TurnRight();
+            else if (state.finalSpeed.x < 0 && isFacingRight) TurnLeft();
+        
+        }
+
+        private void FixedUpdate()
+        {
+            tickTimer.Update(Time.fixedDeltaTime);
+
+            while(tickTimer.ShouldTick()) {
+                if (IsServer) {
+                    if (Variables.hasEntityInterpolation) {
+                        // HandleServerTick();
+                    }
+                }
+                else if (IsClient && IsLocalPlayer) {
+                    HandleLocalClientTick();
+                } else if (IsClient){
+                    SimulateOtherClient();
+                }
+            }
+        }
         public void Die() {
             _frameVelocity = Vector2.zero;
             _rb.velocity = Vector2.zero;
@@ -141,7 +470,6 @@ namespace Game {
         private ContactFilter2D Floorfilter;
         private ContactFilter2D Wallfilter;
         private bool isFacingRight = true;
-
         private void CheckCollisions()
         {
             // Ground, Wall and Ceiling
@@ -154,6 +482,7 @@ namespace Game {
             // Hit a Ceiling
             if (ceilingHit) _frameVelocity.y = Mathf.Min(0, _frameVelocity.y);
             
+            ShouldGroundChanged = false;
             // Landed on the Ground
             if (!_grounded && groundHit)
             {
@@ -163,6 +492,7 @@ namespace Game {
                 _endedJumpEarly = false;
                 _currentAirJumps = _stats.AirJumps;
                 GroundedChanged?.Invoke(true, Mathf.Abs(_frameVelocity.y));
+                ShouldGroundChanged = true;
             }
             // Left the Ground
             else if (_grounded && !groundHit)
@@ -170,14 +500,21 @@ namespace Game {
                 _grounded = false;
                 _frameLeftGrounded = _time;
                 GroundedChanged?.Invoke(false, 0);
+                ShouldGroundChanged = true;
             }
+
+            ShouldHitWallChanged = false;
 
             if ((rightWallHit || leftWallHit) && !isNextToWall) {
                 isNextToWall = true;
                 HitWallChanged(true);
+                ShouldHitWallChanged = true;
+                HitWallChangedIsEnterWall = true;
             } else if (!rightWallHit && !leftWallHit && isNextToWall) {
                 isNextToWall = false;
                 HitWallChanged(false);
+                ShouldHitWallChanged = true;
+                HitWallChangedIsEnterWall = false;
             }
 
             if (((rightWallHit && isFacingRight) || (leftWallHit && !isFacingRight)) && !IsWallJumping) {
@@ -194,7 +531,6 @@ namespace Game {
 
         #endregion
 
-
         #region Jumping
 
         private int _currentAirJumps;
@@ -210,6 +546,7 @@ namespace Game {
 
         private void HandleJump()
         {
+            ShouldJumped = false;
             if (!_endedJumpEarly && !_grounded && !_frameInput.JumpHeld && _rb.velocity.y > 0) _endedJumpEarly = true;
 
             if (!_jumpToConsume && !HasBufferedJump) return;
@@ -227,7 +564,10 @@ namespace Game {
             _bufferedJumpUsable = false;
             _coyoteUsable = false;
             _frameVelocity.y = _stats.JumpPower;
+                
             Jumped?.Invoke(_currentAirJumps,false);
+            ShouldJumped = true;
+            JumpedIsWallJump = false;
         }
 
         #endregion
@@ -263,7 +603,10 @@ namespace Game {
             _frameVelocity = newVelocity;
             IsWallJumping = true;
             _wallJumpStartTime=_time;
+
             Jumped?.Invoke(_currentAirJumps,true);
+            ShouldJumped = true;
+            JumpedIsWallJump = true;
         }
 
         #endregion
@@ -294,7 +637,6 @@ namespace Game {
         private bool ShouldDash => !IsDashing && HasDashAvailable && DashWasPressedOnUpdate;
         private void HandleDash() {
             if (ShouldDash) ExecuteDash();
-            DashWasPressedOnUpdate = false;
         }
         [Rpc(SendTo.Owner)]
         public void AddDashPercRpc(float perc)
@@ -413,13 +755,6 @@ namespace Game {
         }
 
         private void ApplyMovement() => _rb.velocity = _frameVelocity;
-
-    #if UNITY_EDITOR
-        private void OnValidate()
-        {
-            if (_stats == null) Debug.LogWarning("Please assign a ScriptableStats asset to the Player Controller's Stats slot", this);
-        }
-    #endif
     }
 
     
@@ -428,7 +763,7 @@ namespace Game {
     {
         public bool JumpDown;
         public bool JumpHeld;
-        public bool Dash;
+        public bool DashDown;
         public Vector2 Move;
     }
 
@@ -439,9 +774,9 @@ namespace Game {
         public event Action<int, bool> Jumped;
         public event Action Dashed;
         public event Action<float> GotPowerUp;
-        public Vector2 FrameInput { get; }
-        public bool IsGrounded { get; }
-        public bool IsSliding { get; }
-        public bool HasDoubleJump { get; }
+        public Vector2 FrameInput { get;}
+        public bool IsGrounded { get;}
+        public bool IsSliding { get;}
+        public bool HasDoubleJump { get;}
     }
 }

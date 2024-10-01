@@ -11,13 +11,12 @@ GameObject:
   - component: {fileID: 9022994330778559341}
   - component: {fileID: 1407581024747555949}
   - component: {fileID: 4702059432363848042}
-  - component: {fileID: -5535097944866285158}
-  - component: {fileID: -6202918504810846700}
   - component: {fileID: 5368106535040874987}
   - component: {fileID: 2062646538257849963}
   - component: {fileID: 8239591192317429522}
-  - component: {fileID: 2755323356965561254}
   - component: {fileID: 8691882172045733449}
+  - component: {fileID: 213794284049014335}
+  - component: {fileID: 3837812786188833729}
   m_Layer: 6
   m_Name: PlayerOffline
   m_TagString: Player
@@ -123,42 +122,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-5535097944866285158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3238342242064073229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 4203260897
-  InScenePlacedSourceGlobalObjectIdHash: 0
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
---- !u!114 &-6202918504810846700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3238342242064073229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00e42d6353bb8cc4e8c269b86a5a0cac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _stats: {fileID: 11400000, guid: 37b2efd7050b92945a0a28868f4f9d97, type: 2}
-  iaa: {fileID: -944628639613478452, guid: fc7b8d83da516ff4e8cab6148d7e451c, type: 3}
-  _limitSpeedToMax: 1
 --- !u!70 &5368106535040874987
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -245,19 +208,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2755323356965561254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3238342242064073229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f09aa0b4d790f034ea4c559fe546c92d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsOnline: 0
 --- !u!114 &8691882172045733449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +236,33 @@ MonoBehaviour:
       value: {fileID: 390049311495582710}
     - key: step3
       value: {fileID: 1076885893323442333}
+--- !u!114 &213794284049014335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce89a549813fa4c25b3a60277ddf1774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stats: {fileID: 11400000, guid: 37b2efd7050b92945a0a28868f4f9d97, type: 2}
+  iaa: {fileID: -944628639613478452, guid: fc7b8d83da516ff4e8cab6148d7e451c, type: 3}
+  _limitSpeedToMax: 1
+--- !u!114 &3837812786188833729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303f6b25d32cc4507b882e73094b5127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5800218899703611787
 GameObject:
   m_ObjectHideFlags: 0

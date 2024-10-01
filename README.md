@@ -1,30 +1,22 @@
 # multiplayertcc
 
 ## Implementation To-Do
-* Test with actual players
-* Add client prediction
-* Add client prediction optionally
-* Add client reconciliation
-* Add client reconciliation optionally
-* Add Entity interpolation
-* Add Entity interpolation optionally
-* Add artificial lag
-* Add artificial lag optionally
-* Test with actual players
+* Add a GiveUp button on the match
+* Fix bug not being able to connect after playing offline
+* Add arrow keys support
 
 ## My personal To-Do
 * Create the toggle pixel art png
 * Fix audio mixing between SFXs and music (win is too quiet)
-* Add Video resolution and fullscreen option
 * Fix Error debug logs involving animation layers
 * When typing name on lobby, stop updating values overriden what is being typed
 * Create SFXs (Death and small Powerup)
 * Create sign pointing right and down pixel art
-* Create Other levels
 * Add end screen when match is over
 
 
 ## Player Feedback To-Do
+* Add instructions maybe
 
 
 

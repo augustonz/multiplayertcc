@@ -11,9 +11,7 @@ namespace Game {
         private NetworkAnimator _networkAnim;
         private SpriteRenderer _sprite;
 
-        [Header("Audio Clips")] [SerializeField]
-
-        private IPlayerController _player;
+        [SerializeField] private IPlayerController _player;
 
         public override void OnNetworkSpawn()
         {

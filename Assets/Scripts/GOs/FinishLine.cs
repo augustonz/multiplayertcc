@@ -19,7 +19,7 @@ public class FinishLine : NetworkBehaviour
 
     public override void OnNetworkSpawn() {
         base.OnNetworkSpawn();
-        if (IsServer) {
+        if (IsClient) {
             Destroy(this);
         }
     }
@@ -35,19 +35,15 @@ public class FinishLine : NetworkBehaviour
         boxCollider.size = new Vector2(COLLIDER_WIDTH, size * WIDTH);
     }
 
-    [Rpc(SendTo.Server)]
-    void CheckOnServerRpc(RpcParams rpcParams = default) {
-        GameController.Singleton.match.LocalPlayerCrossedLine(rpcParams.Receive.SenderClientId);
-    }
 
-    void CheckLocally(ulong playerClientId) {
-        if (playerClientId==NetworkManager.LocalClientId) GameController.Singleton.match.LocalPlayerCrossedLine(playerClientId);
+    void CheckOnServer(ulong playerClientId) {
+        GameController.Singleton.match.PlayerCrossedLineOnServer(playerClientId);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
             PlayerController playerController = other.GetComponent<PlayerController>();
-            CheckLocally(playerController.OwnerClientId);
+            CheckOnServer(playerController.OwnerClientId);
         }
     }
 }

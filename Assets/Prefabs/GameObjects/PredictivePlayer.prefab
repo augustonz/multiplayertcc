@@ -1,0 +1,6822 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &452047533304262823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6747519262991273101}
+  - component: {fileID: 4046962705577281673}
+  - component: {fileID: 7557496486611481014}
+  m_Layer: 6
+  m_Name: PlayerName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6747519262991273101
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452047533304262823}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8814141670210681873}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.12}
+  m_SizeDelta: {x: 0, y: 0.14}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4046962705577281673
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452047533304262823}
+  m_CullTransparentMesh: 1
+--- !u!114 &7557496486611481014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452047533304262823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Gerald
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: cf10bddb3f34da34eb81951118533a1e, type: 2}
+  m_sharedMaterial: {fileID: -6441106858336719833, guid: cf10bddb3f34da34eb81951118533a1e, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 0.08
+  m_fontSizeBase: 0.08
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &3238342242064073229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9022994330778559341}
+  - component: {fileID: 1407581024747555949}
+  - component: {fileID: 4702059432363848042}
+  - component: {fileID: 377633561573193557}
+  - component: {fileID: -6202918504810846700}
+  - component: {fileID: 5368106535040874987}
+  - component: {fileID: 2062646538257849963}
+  - component: {fileID: 8579228809856788164}
+  - component: {fileID: 5242877862949205278}
+  - component: {fileID: 6683161478236906440}
+  - component: {fileID: 3972728712873471052}
+  m_Layer: 6
+  m_Name: PredictivePlayer
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9022994330778559341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.399, y: 0.122, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 986002441719113474}
+  - {fileID: 50959571506549408}
+  - {fileID: 2959133982200934744}
+  - {fileID: 2174401444886932657}
+  - {fileID: 8814141670210681873}
+  - {fileID: 1407946522040747572}
+  - {fileID: 2385151485340463045}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1407581024747555949
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ac322fed80ffe45f8b516bcb1101119e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a8562aaf1f9d7e145911013587371542, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!50 &4702059432363848042
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!114 &377633561573193557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 1269065970
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 0
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+--- !u!114 &-6202918504810846700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e42d6353bb8cc4e8c269b86a5a0cac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stats: {fileID: 11400000, guid: 37b2efd7050b92945a0a28868f4f9d97, type: 2}
+  iaa: {fileID: -944628639613478452, guid: fc7b8d83da516ff4e8cab6148d7e451c, type: 3}
+  _limitSpeedToMax: 1
+  _reconciliationGhostClient: {fileID: 7673736370659441987}
+  _reconciliationGhostServer: {fileID: 8626331946527560812}
+  _seeReconciliationGhosts: 0
+  serverTimeStep: 0.1
+  maxPosError: 2
+  _inputStates:
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  - tick: 0
+    moveInput: {x: 0, y: 0}
+    jumpDown: 0
+    jumpHeld: 0
+    dashDown: 0
+  currentServerPlayerState:
+    m_InternalValue:
+      tick: 0
+      finalPos: {x: 0, y: 0, z: 0}
+      finalRot: {x: 0, y: 0, z: 0, w: 0}
+      finalSpeed: {x: 0, y: 0, z: 0}
+      hasDashed: 0
+      inputMoved: 0
+      lastInputDirection: {x: 0, y: 0}
+      isSliding: 0
+      isGrounded: 0
+      airJumps: 0
+      shouldTriggerHitWall: 0
+      isEnteringWall: 0
+      shouldTriggerJumped: 0
+      isWallJump: 0
+      shouldTriggerGroundChange: 0
+--- !u!70 &5368106535040874987
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015676618, y: -0.1856561}
+  m_Size: {x: 0.40428853, y: 0.61883456}
+  m_Direction: 0
+--- !u!114 &2062646538257849963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: fc7b8d83da516ff4e8cab6148d7e451c, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &8579228809856788164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f09aa0b4d790f034ea4c559fe546c92d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsOnline: 1
+--- !u!95 &5242877862949205278
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f7735efcde63a4edaacb91bd20825fe6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6683161478236906440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30985bdffa85249b08470bd3eb26d9ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransitionStateInfoList:
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 1748754976
+    DestinationState: 125937960
+    TransitionDuration: 0
+    TriggerNameHash: -1481439722
+    TransitionIndex: 0
+  - IsCrossFadeExit: 0
+    Layer: 0
+    OriginatingState: 2081823275
+    DestinationState: 125937960
+    TransitionDuration: 0
+    TriggerNameHash: -1481439722
+    TransitionIndex: 0
+  m_Animator: {fileID: 5242877862949205278}
+--- !u!114 &3972728712873471052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238342242064073229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048093a8076ed4461aef1f935bbda9bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nameToAudioSerializable:
+    items:
+    - key: dash
+      value: {fileID: 5493737068709887923}
+    - key: powerup
+      value: {fileID: 1337898372496283899}
+    - key: jump
+      value: {fileID: 9188187737573530868}
+    - key: fall
+      value: {fileID: 6775699176068609210}
+    - key: step1
+      value: {fileID: 7910959910949786936}
+    - key: step2
+      value: {fileID: 2008756310438574732}
+    - key: step3
+      value: {fileID: 1363673193127729083}
+--- !u!1 &3706708832099131952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 986002441719113474}
+  - component: {fileID: 1337898372496283899}
+  - component: {fileID: 5493737068709887923}
+  - component: {fileID: 6775699176068609210}
+  - component: {fileID: 9188187737573530868}
+  - component: {fileID: 7910959910949786936}
+  - component: {fileID: 2008756310438574732}
+  - component: {fileID: 1363673193127729083}
+  m_Layer: 6
+  m_Name: AudioSourceHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &986002441719113474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3706708832099131952}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.399, y: -0.122, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9022994330778559341}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1337898372496283899
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3706708832099131952}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 3024469403263875154, guid: c7d46b84f63754c419f29f5b9bf6444f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: b869182bf7dc3474aa4785c3074462c4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &5493737068709887923
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3706708832099131952}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 3024469403263875154, guid: c7d46b84f63754c419f29f5b9bf6444f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: fc7d8183a90586a4bbf24e8acc92fd2d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &6775699176068609210
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3706708832099131952}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 3024469403263875154, guid: c7d46b84f63754c419f29f5b9bf6444f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 6fe0f472c7745aa4da22cc1d07fc6f85, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &9188187737573530868
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3706708832099131952}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 3024469403263875154, guid: c7d46b84f63754c419f29f5b9bf6444f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 99bf1a24619a4f64cbaaafc053135482, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &7910959910949786936
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3706708832099131952}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 3024469403263875154, guid: c7d46b84f63754c419f29f5b9bf6444f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 2b9208f0d3753064bb41134d15db1fef, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.817
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &2008756310438574732
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3706708832099131952}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 3024469403263875154, guid: c7d46b84f63754c419f29f5b9bf6444f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: d446a9e14220dcb4fbf14a84f21dc1c9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.15
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1363673193127729083
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3706708832099131952}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 3024469403263875154, guid: c7d46b84f63754c419f29f5b9bf6444f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 6e92408fd1a7b7a469f24f6fdcfb7f09, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.15
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &5294863209212677903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2174401444886932657}
+  - component: {fileID: 7597558140924631221}
+  m_Layer: 6
+  m_Name: RightWallCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2174401444886932657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5294863209212677903}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9022994330778559341}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7597558140924631221
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5294863209212677903}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.21349609, y: -0.15794665}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.03946702, y: 0.29806244}
+  m_EdgeRadius: 0
+--- !u!1 &5466730791251131320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2959133982200934744}
+  - component: {fileID: 2121640354781333444}
+  m_Layer: 6
+  m_Name: LeftWallCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2959133982200934744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5466730791251131320}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9022994330778559341}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2121640354781333444
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5466730791251131320}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.24737257, y: -0.15794665}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.044414997, y: 0.29806244}
+  m_EdgeRadius: 0
+--- !u!1 &7071778837176577572
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8814141670210681873}
+  - component: {fileID: 1588936133251935701}
+  - component: {fileID: 5440979420663222305}
+  - component: {fileID: 6945450016738776353}
+  - component: {fileID: 2297699233692181415}
+  m_Layer: 6
+  m_Name: PlayerUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &8814141670210681873
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071778837176577572}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6747519262991273101}
+  m_Father: {fileID: 9022994330778559341}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.014, y: -0.08}
+  m_SizeDelta: {x: 0.4048, y: 0.8412}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &1588936133251935701
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071778837176577572}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &5440979420663222305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071778837176577572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!114 &6945450016738776353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071778837176577572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2297699233692181415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071778837176577572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e86bcd006334bd99e578d00c4f9be8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: {fileID: 7557496486611481014}
+--- !u!1 &7673736370659441987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1407946522040747572}
+  - component: {fileID: 4689079369831541306}
+  m_Layer: 0
+  m_Name: reconciliationClient
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1407946522040747572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673736370659441987}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9022994330778559341}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &4689079369831541306
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673736370659441987}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: aaffb74a5900746929a1c284e93dec69, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -2
+  m_Sprite: {fileID: 21300000, guid: a8562aaf1f9d7e145911013587371542, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &7706955985712210238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 50959571506549408}
+  - component: {fileID: 2011536975735100394}
+  m_Layer: 6
+  m_Name: GroundCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &50959571506549408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706955985712210238}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.494, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9022994330778559341}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2011536975735100394
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7706955985712210238}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015992068, y: -0.0034840852}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3614757, y: 0.014963537}
+  m_EdgeRadius: 0
+--- !u!1 &8626331946527560812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2385151485340463045}
+  - component: {fileID: 5429488384276485528}
+  m_Layer: 0
+  m_Name: reconciliationServer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2385151485340463045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8626331946527560812}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9022994330778559341}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5429488384276485528
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8626331946527560812}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7e407a529cce44213a1c520c9e14bf99, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: a8562aaf1f9d7e145911013587371542, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0

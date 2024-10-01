@@ -90,9 +90,31 @@ public class Match : NetworkBehaviour
         if (matchUI!=null) matchUI.UpdateSpeedrunTimer(currentRoundTimer);
     }
 
-    public void LocalPlayerCrossedLine(ulong clientId) {
+    public void PlayerCrossedLineOnServer(ulong clientId) {
+        MatchData newMatchData = GetCopy(matchData.Value);
+        
+        PlayerMatchData currentPlayerMatchData = newMatchData.playersInMatch.First(data=>data.clientId==clientId);
+
+        int scoreToAdd = _winPosToPointsGivenDict[nextPlayerWinPos];
+        newMatchData.UpdatePlayerMatchData(clientId,currentRoundTimer: currentRoundTimer,score: currentPlayerMatchData.score+scoreToAdd, currentRoundPlacement: nextPlayerWinPos);
+        
+        nextPlayerWinPos+=1;
+
+        matchData.Value = newMatchData;
+
+        if (hasWinner==false) FirstPlayerFinished();
+        
+        playersThatCrossedLine +=1;
+        if (playersThatCrossedLine==newMatchData.PlayersInMatch) {
+            hasEnded = true;
+        }
+
+        PlayerCrossedLineRpc(RpcTarget.Single(clientId, RpcTargetUse.Temp));
+
+    }
+
+    public void LocalPlayerCrossedLine() {
         hasFinishedClient = true;
-        CrossedLineRpc(clientId);
         FinishRound();
         AudioManager.instance.PlaySFX("win");
     }
@@ -151,6 +173,8 @@ public class Match : NetworkBehaviour
     }
 
     IEnumerator PrepareRace() {
+        SetLatencyCompensationVariables();
+
         yield return new WaitForSeconds(5f);
         
         SpawnAllPlayersInMatch();
@@ -160,6 +184,20 @@ public class Match : NetworkBehaviour
         yield return new WaitForSeconds(8f);
 
         StartRace();
+    }
+
+    void SetLatencyCompensationVariables() {
+        ulong currentRound = matchData.Value.currentMatchRound;
+        ulong leftover = currentRound%4;
+
+        Variables.hasClientSidePrediction = leftover == 2 || leftover == 3;
+        Variables.hasServerReconciliation = leftover == 3;
+        Variables.hasEntityInterpolation = leftover == 0;
+        Variables.hasArtificialLag = currentRound>4;
+
+
+        Debug.Log($"client side rendering: {Variables.hasClientSidePrediction}, servefr reconciliation {Variables.hasServerReconciliation}, entity interpolation {Variables.hasEntityInterpolation}, artificial Lag {Variables.hasArtificialLag}");
+        SetLatencyCompensationVariablesRpc(Variables.hasClientSidePrediction,Variables.hasServerReconciliation,Variables.hasEntityInterpolation,Variables.hasArtificialLag);
     }
 
     void SpawnAllPlayersInMatch() {
@@ -175,7 +213,7 @@ public class Match : NetworkBehaviour
         if (!hasRaceStarted) return;
         currentRoundTimer+=Time.deltaTime;
 
-        if (hasWinner && !hasEnded && currentRoundTimer>forceEndRoundTimer) ForceEndRound();
+        //if (hasWinner && !hasEnded && currentRoundTimer>forceEndRoundTimer) ForceEndRound();
 
         if (hasEnded) CheckAllPlayersReady();
     }
@@ -193,8 +231,14 @@ public class Match : NetworkBehaviour
         SetPropertiesOnNewRoundRpc();
         MatchData newMatchData = GenerateNextRoundMatchData();
         matchData.Value = newMatchData;
-        string newSceneName = GameController.Singleton.MySceneManager.GetLevelById(newMatchData.stageId);
-        GameController.Singleton.MySceneManager.ChangeSceneRpc(newSceneName);
+        
+        if (newMatchData.currentMatchRound<=newMatchData.maxMatchRounds) {
+            string newSceneName = GameController.Singleton.MySceneManager.GetLevelById(newMatchData.stageId);
+            GameController.Singleton.MySceneManager.ChangeSceneRpc(newSceneName);
+        } else {
+            GameController.Singleton.MySceneManager.ChangeSceneRpc("Menu");
+        }
+
     }
 
     void ForceEndRound() {
@@ -219,6 +263,14 @@ public class Match : NetworkBehaviour
     }
 
     [Rpc(SendTo.NotServer)]
+    void SetLatencyCompensationVariablesRpc(bool clientPrediction, bool serverReconcilation, bool entityInterpolation, bool artificialLag) {
+        Variables.hasClientSidePrediction=clientPrediction;
+        Variables.hasServerReconciliation=serverReconcilation;
+        Variables.hasEntityInterpolation=entityInterpolation;
+        Variables.hasArtificialLag=artificialLag;
+    }
+
+    [Rpc(SendTo.NotServer)]
     void SetPropertiesOnNewRoundRpc() {
         SetPropertiesOnNewRound();
     }
@@ -236,6 +288,11 @@ public class Match : NetworkBehaviour
     [Rpc(SendTo.NotServer)]
     void StartServerAnimationRpc() {
        matchUIInternal.PlayerStartRaceAnimation();
+    }
+
+    [Rpc(SendTo.SpecifiedInParams)]
+    void PlayerCrossedLineRpc(RpcParams rpcParams = default) {
+       LocalPlayerCrossedLine();
     }
 
     #endregion
@@ -292,7 +349,7 @@ public class Match : NetworkBehaviour
             });
         } 
     
-        generatedMatchData.maxMatchRounds = 2;
+        generatedMatchData.maxMatchRounds = 8;
         generatedMatchData.currentMatchRound = 1;
         generatedMatchData.stageId = 1;
     }

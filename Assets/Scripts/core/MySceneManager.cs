@@ -67,6 +67,10 @@ public class MySceneManager : NetworkBehaviour
         NetworkManager.Singleton.SceneManager.OnLoadEventCompleted += cb;
     } 
 
+    public void ChangeSceneOffline(string sceneName) {
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void ExitGame() {
         Application.Quit();
     }
